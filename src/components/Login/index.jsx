@@ -1,22 +1,25 @@
-import React, { Component } from 'react'; 
+import React from 'react'; 
 import ReactDOM from 'react-dom';
 
+import ErrorMessage from '../ErrorMessage';
 import Dashboard from '../Dashboard';
 import history from '../../history';
 
 import './style.css';
 
-class Login extends Component {
+class Login extends React.Component {
     constructor(props) {
-    super(props);
-    this.state = {
-        name: '',
-        password : ''};
+        super(props);
+        this.state = {
+            name: '',
+            password : '',
+            error: false };
 
-    this.handleEmailChange = this.handleEmailChange.bind(this);
-    this.handlePasswordChange = this.handlePasswordChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleEmailChange = this.handleEmailChange.bind(this);
+        this.handlePasswordChange = this.handlePasswordChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
+
     render() {
         return (
             <div className = "formPage-wrapper">
@@ -26,18 +29,18 @@ class Login extends Component {
                     </div>
                     <form className = "form1" onSubmit={this.handleSubmit}>
                         <div className="field-wrapper" >
-                            <input className="field-input" type="text" id="name"  placeholder="UserName" value={this.state.name} onChange={this.handleEmailChange} />
+                            <input className="field-input" type="text" id="name"  placeholder="john.doe" value={this.state.name} onChange={this.handleEmailChange} />
                             <label className="field-label" htmlFor="username" >Username</label>
                         </div>
                         <div className="field-wrapper" >
-                            <input className="field-input" type="password" id="password"  placeholder="........" value={this.state.password} onChange={this.handlePasswordChange} />
+                            <input className="field-input" type="password" id="password"  placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" value={this.state.password} onChange={this.handlePasswordChange} />
                             <label className="field-label" htmlFor="password" >Password</label>
                         </div>
                         <div className="submit-btn-wrapper">
                             <button className="submit-btn" type="submit">Login</button>
                         </div>
                     </form>
-                    <p>Username or password is invalid</p>
+                    {this.state.error && <ErrorMessage />}
                 </div>
             </div>
         );
@@ -60,18 +63,16 @@ class Login extends Component {
         Credentials.push(pass);
         console.log(Credentials);
 
-        if(  email == "admin" && pass == "admin" )
+        if(  email === "admin" && pass === "admin" )
         {
-            console.log( "validation succeeded" );
             history.push('/dashboard');
             renderForm();
         }
         else
         {
-            ReactDOM.render(
-                <Login error={true} />,
-                document.getElementById('root')
-            );
+            this.setState({
+                error: true
+            });
         }
     }
 }

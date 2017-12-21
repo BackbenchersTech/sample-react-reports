@@ -1,0 +1,28 @@
+.notFound {
+    text-align: center;
+  }
+  
+  .notFound-logo {
+    animation: notFound-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+  
+  .notFound-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .notFound-title {
+    font-size: 1.5em;
+  }
+  
+  .notFound-intro {
+    font-size: large;
+  }
+  
+  @keyframes notFound-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }

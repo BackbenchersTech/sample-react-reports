@@ -1,9 +1,8 @@
-import React, { Component } from 'react'; 
-import ReactDOM from 'react-dom';
-import { Route, NavLink, HashRouter } from 'react-router-dom';
+import React from 'react';
+import { Route, NavLink, BrowserRouter } from 'react-router-dom';
 import { Grid, Row, Col } from 'react-bootstrap';
 
-import history from '../../history';
+import Sidebar from '../Sidebar';
 import ReportStyle1 from '../ReportStyle1';
 import ReportStyle2 from '../ReportStyle2';
 
@@ -20,33 +19,17 @@ class Dashboard extends React.Component {
     render() {
         if (this.state.isLoggedIn) {
             return ( 
-                <HashRouter>
+                <BrowserRouter>
                     <Grid fluid>
                         <Row>
-                            <Col className="sidebar" md={3}>
-                                <div className="userWrapper">
-                                    <div className="profPic"><img src="http://www.oiioproperty.com/Images/article/2016051402425466.png" alt="Profile User"/></div>
-                                    <div className="details">
-                                        <p className="name">John Doe</p>
-                                    </div>
-                                </div>
-                                <div className="reportsBlock">
-                                    <ul className="reports">
-                                        <li className="reportTitle"><NavLink to="/report1">Report 1</NavLink></li>
-                                        <li className="reportTitle"><NavLink to="/report2">Report 2</NavLink></li>
-                                        {/* <li className="reportTitle">Report 3</li>
-                                        <li className="reportTitle">Report 4</li>
-                                        <li className="reportTitle">Report 5</li> */}
-                                    </ul>
-                                </div>
-                            </Col>
+                            <Sidebar />
                             <Col className="content" md={9}>
-                                <Route path="/report1" component={ReportStyle1} />
-                                <Route path="/report2" component={ReportStyle2} />
+                                <Route path="/dashboard/report1" component={ReportStyle1} />
+                                <Route path="/dashboard/report2" component={ReportStyle2} />
                             </Col>
                         </Row>
                     </Grid>
-                </HashRouter> 
+                </BrowserRouter> 
             );
         }
         else {

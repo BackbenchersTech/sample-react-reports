@@ -1,14 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
+import NotFound from './components/NotFound';
 
 const Routes = (props) => (
     <Router {...props}>
         <div>
-            <Route path="/login" component={Login} />
-            <Route path="/dashboard" component={Dashboard} />
+            <Switch>
+                <Route path="/login" component={Login} />
+                <Route path="/dashboard" component={Dashboard} />
+                <Route path="*" component={NotFound} />
+            </Switch>
         </div>
     </Router>
 );

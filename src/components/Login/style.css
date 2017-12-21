@@ -43,7 +43,8 @@
 
 }
 
-.field-input:focus {
+.field-input:focus,
+.field-input:focus + label {
 	background-color: #EDEDED;
 	color : #333;
 }
