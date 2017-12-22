@@ -1,12 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import registerServiceWorker from './registerServiceWorker';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
-import Routes from './routes';
-
+// Layouts
+import PrimaryLayout from './layouts/PrimaryLayout'
+import UnauthorizedLayout from './layouts/UnauthorizedLayout'
 import './index.css';
 
-ReactDOM.render(
-    <Routes />, document.getElementById('root')
+const App = props => (
+    <BrowserRouter>
+        <Switch>
+            <Route path="/auth" component={UnauthorizedLayout} />
+            <Route path="/app" component={PrimaryLayout} />
+            <Redirect to="/auth" />
+        </Switch>
+    </BrowserRouter>
 );
-registerServiceWorker();
+
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+);
