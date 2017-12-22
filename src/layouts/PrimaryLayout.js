@@ -1,9 +1,11 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
+import Sidebar from '../components/Sidebar';
+
 const PrimaryLayout = ({ match }) => (
     <div className="primaryLayout">
-        <h2>Primary Layout</h2>
+        <Sidebar />
     </div>
 );
 

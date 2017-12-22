@@ -1,9 +1,14 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
+import Login from '../components/Login';
+
 const UnauthorizedLayout = () => (
     <div className="unauthorizedLayout">
-        <h2>Unauthorized Layout</h2>
+        <Switch>
+            <Route path="/auth/login" component={Login} />
+            <Redirect to="/auth/login" />
+        </Switch>
     </div>
 );
 
