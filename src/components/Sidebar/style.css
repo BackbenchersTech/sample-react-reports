@@ -1,0 +1,119 @@
+.dashboardSidebar {
+	height: 100vh;
+	background-color: #00274c;
+	color:white;
+	overflow:hidden;
+
+}
+
+.userDetailsWrapper {
+	height: 30vh; 
+	text-align: center;
+}
+
+.userImg {
+	height: 18vh;
+	padding-top: 3vh;
+
+}
+.img-circle {
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	
+}
+.userName {
+	height: 7vh;
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 1vh
+}
+.Parent {
+	overflow: hidden;
+	height: 50vh;
+
+}
+.userReportsBlock {
+	height: 50vh;
+	border-top : 1px solid white;   
+ 	overflow-y: scroll;
+
+}
+
+::-webkit-scrollBar{
+	display: none;
+}
+
+.userReports {
+	list-style-type: none;
+	text-align: left;
+	padding-left: 0px !important;
+	padding-top: 15px;
+	/*display: table-cell;
+	vertical-align: middle;
+*/
+
+}
+.userReports li  {
+	height: 5vh;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 5px;
+	display: flex;
+  	align-items: center
+
+}
+
+.userReports li:active,
+.userReports li:hover
+ {
+ 	background-color: #ffcb05;
+ 	color: #00274c;
+}
+
+.userReports li.userReportTitle a {
+	color: white;
+}
+
+.userReports li.userReportTitle a:active,
+.userReports li.userReportTitle a:hover {
+	color : #00274c;
+}
+
+.userFooterBlock {
+	height: 18vh;
+	text-align: center;
+	border-top : 1px solid white;
+}
+
+.userFooter {
+	margin-bottom: 0px;
+	list-style-type: none;
+	text-align: left;
+	padding-left: 0px !important;
+	margin-top: 1vh;
+}
+
+.userFooter li {
+	padding: 7px;
+	height: 6vh;
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 15px;
+}
+
+.fa {
+	margin-right: 5px;
+}
+
+.user_help a,
+.user_settings a,
+.user_logout a {
+	color:white;
+}
+
+.appName {
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 10px;
+}

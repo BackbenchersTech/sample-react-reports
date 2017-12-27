@@ -1,49 +1,37 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Col } from 'react-bootstrap';
+import './style.css';
 
 export default class Sidebar extends React.Component {
-    render() {
+    render() {   
         return(
-            <Col className="sidebar" xs={3} md={2}>
-                <div className="appBranding">
-                    <Link to="/app"><h2>App Name</h2></Link>
-                </div>
-                <div className="userWrapper">
-                    <div className="profilePic"><img className="img-responsive" src="http://www.oiioproperty.com/Images/article/2016051402425466.png" alt="Profile Picture" /></div>
-                    <div className="details">
-                        <p className="name">John Doe</p>
+            <Col className="dashboardSidebar" xs = {3} sm = {3} md={2}>
+                <div className="userDetailsWrapper">
+                    <h4 className = "appName">React App </h4>
+                    <div className="userImg"><img className = "img-circle" src="http://www.oiioproperty.com/Images/article/2016051402425466.png" alt="Profile User"/></div>
+                        <div className="userDetails">
+                            <p className="userName">John Doe</p>
+                        </div>
                     </div>
-                </div>
-                <div className="reportsBlock">
-                    <ul className="reports">
-                        <li className="reportTitle">
-                            <NavLink to="/app/report1">Report 1</NavLink>
-                        </li>
-                        <li className="reportTitle">
-                            <NavLink to="/app/report2">Report 2</NavLink>
-                        </li>
-                        <li className="reportTitle">
-                            <NavLink to="/report3">Report 3</NavLink>
-                        </li>
-                    </ul>
-                </div>
-                <div className="footer">
-                    <ul className="footerLinks">
-                        <li>
-                            <NavLink to="/app">Home</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/help">Help</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/settings">Settings</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/logout">Logout</NavLink>
-                        </li>
-                    </ul>
-                </div>
+                    <div className = "Parent">
+                        <div className="userReportsBlock">
+                            <ul className="userReports">
+                                <li className="userReportTitle"><NavLink to="/app">Home</NavLink></li>  
+                                <li className="userReportTitle"><NavLink to="/app/report1">Report 1</NavLink></li>
+                                <li className="userReportTitle"><NavLink to="/app/report2">Report 2</NavLink></li>
+                                <li className="userReportTitle"><NavLink to="/report3">Report 3</NavLink></li>     
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div className  = "userFooterBlock">
+                        <ul className = "userFooter">
+                            <li className = "user_help" ><i className="fa fa-info" aria-hidden="true"></i> <NavLink to="/help">Help</NavLink></li>
+                            <li className = "user_settings" ><i className="fa fa-cog" aria-hidden="true"></i> <NavLink to="/settings">Settings</NavLink> </li>
+                            <li className = "user_logout" ><i className="fa fa-power-off" aria-hidden="true"></i> <NavLink to="/logout">Logout</NavLink></li>
+                        </ul>
+                    </div>
             </Col>
         )
     }
