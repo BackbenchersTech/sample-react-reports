@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 
 import ErrorMessage from '../ErrorMessage';
 import Dashboard from '../Dashboard';
-import history from '../../history';
 
 import './style.css';
 
 class Login extends React.Component {
     constructor(props) {
         super(props);
+        this.history = props.history;
         this.state = {
             name: '',
             password : '',
@@ -61,12 +61,10 @@ class Login extends React.Component {
         var Credentials = [];
         Credentials.push(email);
         Credentials.push(pass);
-        console.log(Credentials);
 
         if(  email === "admin" && pass === "admin" )
         {
-            history.push('/dashboard');
-            renderForm();
+            this.history.push('/app');
         }
         else
         {
