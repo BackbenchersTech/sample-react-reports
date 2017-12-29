@@ -25,7 +25,7 @@ class ReportStyle1 extends React.Component {
             mode: 'checkbox'
         };
         this.options = {
-            sortIndicator: false,
+            sortIndicator: false
         };
     }
 

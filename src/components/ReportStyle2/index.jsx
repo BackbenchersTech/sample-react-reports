@@ -11,7 +11,10 @@ class ReportStyle2 extends React.Component {
         this.state = {
 			list: [],
 			cols: []
-        };
+		};
+		this.options = {
+			sortIndicator: false
+		};
     }
 
 	componentWillMount(){
@@ -30,17 +33,16 @@ class ReportStyle2 extends React.Component {
 	}
 
 	getKeys(data) {
-		return Object.keys(data)
+		return Object.keys(data);
 	}
 
     render() {	
         return (
             <div>
                 <h2> Report Style 2</h2>
-				{this.state.cols.map(column => console.log(column))}
-				<BootstrapTable data={this.state.list} striped hover pagination search multiColumnSearch exportCSV keyField='id' >
+				<BootstrapTable data={this.state.list} striped hover pagination search multiColumnSearch exportCSV keyField='id' options={this.options} >
 					{this.state.cols.map(column =>
-						<TableHeaderColumn dataField={column}>{column}</TableHeaderColumn>
+						<TableHeaderColumn dataField={column} dataSort>{column}</TableHeaderColumn>
 					)}
 				</BootstrapTable> 
             </div>
