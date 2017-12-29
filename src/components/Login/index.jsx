@@ -1,8 +1,6 @@
-import React from 'react'; 
-import ReactDOM from 'react-dom';
+import React from 'react';
 
 import ErrorMessage from '../ErrorMessage';
-import Dashboard from '../Dashboard';
 
 import './style.css';
 
@@ -73,13 +71,6 @@ class Login extends React.Component {
             });
         }
     }
-}
-
-function renderForm() {
-    ReactDOM.render(
-        <Dashboard isLoggedIn={true} />, 
-        document.getElementById('root')
-    );
 }
 
 export default Login;
