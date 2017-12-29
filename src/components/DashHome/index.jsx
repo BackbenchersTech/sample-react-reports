@@ -1,8 +1,11 @@
 import React from 'react';
+import './style.css';
 
 const DashHome = ({ history }) => (
-    <div>
-        Dashboard Home Page
+    <div className = "pageContent">
+       Welcome,
+       <br/>
+       Please select your report.
     </div>
 );
 
