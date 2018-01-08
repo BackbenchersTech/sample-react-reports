@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ErrorMessage from '../ErrorMessage';
+import { login } from '../../actions';
 
 import './style.css';
 
@@ -56,20 +57,19 @@ class Login extends React.Component {
         event.preventDefault();
         var email = this.state.name;
         var pass = this.state.password;
-        var Credentials = [];
-        Credentials.push(email);
-        Credentials.push(pass);
+        var Credentials = {};
+        Credentials.email = email;
+        Credentials.pwd = pass;
 
-        if(  email === "admin" && pass === "admin" )
-        {
-            this.history.push('/app');
-        }
-        else
-        {
-            this.setState({
-                error: true
-            });
-        }
+        login(Credentials).then((res) => {
+            console.log(res)
+            if(res) {
+                this.history.push('/app');
+            }
+            else {
+                this.setState({error: !res});
+            }
+        })
     }
 }
 
