@@ -8,7 +8,8 @@
 	display:flex;
 	justify-content: center;
 	width: 100%;
-	height: 100%;
+    height: 100vh;
+    background-image: url("../../assets/poly bg.png");
 }
 
 .form-header {

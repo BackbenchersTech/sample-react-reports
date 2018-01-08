@@ -1,119 +1,123 @@
-.dashboardSidebar {
-	height: 100vh;
+.sidebar {
+	min-height: 100vh;
+	max-height: 100vh;
 	background-color: #00274c;
 	color:white;
 	overflow:hidden;
-
+	padding: 0px;
 }
 
-.userDetailsWrapper {
-	height: 30vh; 
+.sidebar .userDetailsWrapper {
+	max-height: 30vh; 
 	text-align: center;
 }
 
-.userImg {
+.sidebar .userDetailsWrapper .appName {
+	font-size: 24px;
+	line-height: 36px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	margin: 0;
+}
+
+/* .sidebar .userDetailsWrapper .userImg {
 	height: 18vh;
 	padding-top: 3vh;
+} */
 
-}
-.img-circle {
-	width: 100px;
-	height: 100px;
+.sidebar .userDetailsWrapper .userImg .img-circle {
+	width: 150px;
+	height: 150px;
 	padding: 10px;
-	
 }
-.userName {
-	height: 7vh;
-	font-size: 20px;
-	font-weight: bold;
-	padding-top: 1vh
-}
-.Parent {
-	overflow: hidden;
-	height: 50vh;
 
+.sidebar .userDetailsWrapper .userDetails .userName {
+	font-size: 20px;
+	line-height: 34px;
+	margin: 0px;
+	padding: 5px;
 }
-.userReportsBlock {
-	height: 50vh;
+
+.sidebar .userReportsBlock {
+	max-height: 50vh;
+	padding-top: 10px;
 	border-top : 1px solid white;   
  	overflow-y: scroll;
-
 }
 
-::-webkit-scrollBar{
+/* Whose scrollbar? */
+::-webkit-scrollBar {
 	display: none;
 }
 
-.userReports {
+.sidebar .userReportsBlock .userReports {
 	list-style-type: none;
 	text-align: left;
-	padding-left: 0px !important;
-	padding-top: 15px;
-	/*display: table-cell;
-	vertical-align: middle;
-*/
-
+	padding-left: 0px;
+	margin-bottom: 0px;
 }
-.userReports li  {
-	height: 5vh;
+
+.sidebar .userReportsBlock .userReports li {
 	font-size: 18px;
-	font-weight: bold;
+	line-height: 24px;
 	padding: 5px;
-	display: flex;
-  	align-items: center
-
 }
 
-.userReports li:active,
-.userReports li:hover
- {
+.sidebar .userReportsBlock .userReports li:active,
+.sidebar .userReportsBlock .userReports li:hover {
  	background-color: #ffcb05;
  	color: #00274c;
 }
 
-.userReports li.userReportTitle a {
+.sidebar .userReportsBlock .userReports li.userReportTitle a {
 	color: white;
 }
 
-.userReports li.userReportTitle a:active,
-.userReports li.userReportTitle a:hover {
+.sidebar .userReportsBlock .userReports li.userReportTitle a:active,
+.sidebar .userReportsBlock .userReports li.userReportTitle a:hover {
+	text-decoration: none;
 	color : #00274c;
 }
 
-.userFooterBlock {
-	height: 18vh;
-	text-align: center;
+.sidebar .userReportsBlock .userReports li.userReportTitle a:focus {
+	text-decoration: none;
+}
+
+.sidebar .userFooterBlock {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	max-height: 20vh;
+	padding-top: 10px;
 	border-top : 1px solid white;
 }
 
-.userFooter {
+.sidebar .userFooterBlock .userFooter {
 	margin-bottom: 0px;
 	list-style-type: none;
 	text-align: left;
-	padding-left: 0px !important;
-	margin-top: 1vh;
+	padding-left: 0px;
 }
 
-.userFooter li {
-	padding: 7px;
-	height: 6vh;
+.sidebar .userFooterBlock .userFooter li {
+	line-height: 24px;
 	font-size: 18px;
-	font-weight: bold;
-	padding-top: 15px;
+	padding: 5px;
+}
+
+.sidebar .userFooterBlock .userFooter li a:hover,
+.sidebar .userFooterBlock .userFooter li a:active,
+.sidebar .userFooterBlock .userFooter li a:focus {
+	text-decoration: none;
 }
 
 .fa {
 	margin-right: 5px;
 }
 
-.user_help a,
-.user_settings a,
-.user_logout a {
+.sidebar .userFooterBlock .userFooter li.user_help a,
+.sidebar .userFooterBlock .userFooter li.user_settings a,
+.sidebar .userFooterBlock .userFooter li.user_logout a {
 	color:white;
-}
-
-.appName {
-	font-size: 20px;
-	font-weight: bold;
-	padding-top: 10px;
 }
