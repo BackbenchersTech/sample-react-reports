@@ -114,6 +114,8 @@
 
 .fa {
 	margin-right: 5px;
+	width: 15px;
+	text-align: center;
 }
 
 .sidebar .userFooterBlock .userFooter li.user_help a,

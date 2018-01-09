@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
 import './style.css';
@@ -8,15 +9,8 @@ class ReportStyle1 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            products: [{
-                id: 1,
-                name: 'Product1',
-                price: 120
-            }, {
-                id: 2,
-                name: 'Product2',
-                price: 80
-            }]
+            list: [],
+            users: []
         };
         this.cellEditProp= {
             mode: 'click',
@@ -28,21 +22,58 @@ class ReportStyle1 extends React.Component {
         this.options = {
             sortIndicator: false
         };
+
+        this.userFormatter = this.userFormatter.bind(this);
     }
 
-    priceFormatter(cell, row) {
-        return `<i class="glyphicon glyphicon-usd"></i> ${cell}`;
+    componentWillMount(){
+        let currentComponent = this;
+        axios.get('https://jsonplaceholder.typicode.com/users')
+            .then(function(response) {
+                currentComponent.setState({
+                    users:response.data
+                })
+            })
+            .catch(function(error) {
+                console.log(error);
+            })
+		axios.get('https://jsonplaceholder.typicode.com/todos')
+			.then(function (response) {
+				currentComponent.setState({
+					  list: response.data
+    			})
+			})
+			.catch(function (error) {
+				console.log(error);
+			});
+    }
+
+    statusFormatter(cell, row) {
+        if( `${cell}` === 'true')
+            return `<i class="fa fa-check"></i>`
+        else
+            return `<i class="fa fa-times"></i>`
+    }
+
+    userFormatter(cell, row) {
+        for(var i in this.state.users) {
+            if( +`${cell}` === this.state.users[i].id )
+                return this.state.users[i].name
+        }
     }
 
     render() {
         return (
             <div>
-                <h2>Report Style 1</h2>
-                <BootstrapTable data={this.state.products} striped hover pagination search multiColumnSearch insertRow deleteRow exportCSV selectRow={ this.selectRowProp } cellEdit={ this.cellEditProp } options={this.options}>
-                    <TableHeaderColumn isKey dataField='id' dataSort>ProductID</TableHeaderColumn>
-                    <TableHeaderColumn dataField='name' dataSort csvHeader='product-name'>Product Name</TableHeaderColumn>
-                    <TableHeaderColumn dataField='price' dataFormat={this.priceFormatter}>Product Price</TableHeaderColumn>
+                <h2>Todos Report</h2>
+                {this.state.users.length>0 && 
+                <BootstrapTable data={this.state.list} striped hover pagination search multiColumnSearch exportCSV insertRow deleteRow selectRow={ this.selectRowProp } cellEdit={ this.cellEditProp } options={this.options} >
+                    <TableHeaderColumn dataField='id' isKey dataSort>PostId</TableHeaderColumn>
+                    <TableHeaderColumn dataField='userId' dataFormat={this.userFormatter} dataSort>UserId</TableHeaderColumn>
+                    <TableHeaderColumn dataField='title' dataSort>Title</TableHeaderColumn>
+                    <TableHeaderColumn dataField='completed' dataFormat={this.statusFormatter} headerAlign='left' dataAlign='center'>Completed</TableHeaderColumn>
                 </BootstrapTable>
+                }
                 {/* you can give container classes, tablecontainer classes, headercontainerclass, bodycontainerclass, tableheaderclass, tablebodyclass, columnheaderclass, columnclass */}
             </div>
         );

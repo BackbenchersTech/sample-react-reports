@@ -10,14 +10,8 @@ import ReportStyle2 from '../components/ReportStyle2';
 import { getLoggedUser } from '../actions'
 
 class PrimaryLayout extends React.Component {
-    constructor(props) {
-        super(props);
-        console.log(this.props.logged)
-    }
-
     componentWillMount() {
         getLoggedUser();
-        console.log(this.props)
     }
 
     layout =
