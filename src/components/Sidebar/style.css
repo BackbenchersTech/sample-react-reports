@@ -5,6 +5,7 @@
 	color:white;
 	overflow:hidden;
 	padding: 0px;
+	width: 280px;
 }
 
 .sidebar .userDetailsWrapper {
@@ -81,6 +82,10 @@
 
 .sidebar .userReportsBlock .userReports li.userReportTitle a:focus {
 	text-decoration: none;
+}
+
+.sidebar .userDetailsWrapper .appName a {
+	color:white;
 }
 
 .sidebar .userFooterBlock {
