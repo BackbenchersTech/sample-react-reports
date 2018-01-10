@@ -1,34 +1,195 @@
-.pageSection1 {
-	height: 35vh;
+.pageContent .pageSection1 {	
 	background-color: white;
 	margin-bottom: 20px;
+	color: grey;
+}
+
+.pageContent .pageSection1 .welcomeMsg {
+	padding: 20px;
+	overflow: scroll;
+}
+
+.pageContent .pageSection1 .welcomeMsg .reportsNotificationList {
+	list-style-type: decimal;
+	max-height: 20vh;
+	padding-top:10px;
+	
+}
+.pageContent .pageSection1 .welcomeMsg .reportsNotificationList li {
+	padding: 10px;
+	border-bottom: 1px solid #ededed;
+}
+.pageContent .pageSection1 .graphSection{
+	padding: 30px;
+	padding-top: 40px;
+	overflow: scroll;	
+}
+
+.pageContent .pageSection1 .graphSection .graphImage {
+	height:250px;
+	width: 100%;
+}
+
+.pageContent .pageSection1 .piegraphSection {
+	padding: 20px;
+	padding-right: 30px;
+	overflow: scroll;
+}
+
+.pageContent .pageSection1 .piegraphSection .piegraphTitle {
+	font-size: 18px;
+	padding-left: 5px;
+}
+.pageContent .pageSection1 .piegraphSection .piegraphSubtitle,
+.pageContent .pageSection1 .piegraphSection .piegraphDescription {
+	font-size: 13px;
+	padding: 5px;
+	color: grey;
+}
+
+.pageContent .pageSection1 .piegraphSection .piegraphDescription  {
+	padding-top: 20px;
+}
+
+.pageContent .pageSection1 .piegraphSection .pieChartImage {
+	height : 125px;
+	width : 70%;
+
+
+}
+.pageContent .pageSection2 {
 	margin-top: 20px;
+/*	height: 60vh;*/
+
 }
 
-.pageSection2 {
-	margin-top: 20px;
-	height: 80vh;
+/*.pageContent .pageSection2 .section2Part2 , 
+.pageContent .pageSection2 .section2Part3 {
+	height: 59vh;
+
+}*/
+
+.pageContent .pageSection2 .section2Part1 {
+	/*height: 59vh;*/
+	color: grey;
 }
 
-.section2Part2 , .section2Part3 {
-	background-color: white;
-	height: 80vh;
-	margin-right: 25px;
-}
-
-.section2Part1 {
-	margin-left: 25px;
-	height: 60vh;
-	margin-right: 25px;
-}
-
-.section2Part1Row1 {
-	height: 20vh;
+.pageContent .pageSection2 .section2Part1 .section2Part1Row1 {
 	background-color: white;
 	margin-bottom: 25px;
+/*	height: 16vh;*/
+	padding: 10px;
 }
 
-.section2Part1Row2 {
-	height: 37vh;
+.pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsTitle {
+	padding-left: 10px;
+	padding-top: 20px;
+	margin:0px;
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsDetails{
+	display:inline;
+	width: 50%;
+}
+.pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsImage{
+	display:inline;
+	float: right;
+	padding-right: 10px;
+	margin-top: -30px;
+	overflow: scroll;
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsImage .barchartStock {
+	width: 100px;
+	height: 50px;
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsTitle1,
+.pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsSubtitle
+{
+	padding-left: 10px;
+
+}
+.pageContent .pageSection2 .section2Part1 .section2Part1Row2 {
+/*	height: 40vh;*/
 	background-color: white;
+	padding: 10px;
+	overflow:scroll;
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row2 .CommentsTitle{
+	padding-left: 10px;
+	padding-top: 20px;
+	margin:0px;
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row2 .Comments {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row2 .barschartStock {
+	height:100px;
+	width: 80%;
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed,
+.pageContent .pageSection2 .section2Part3 .section2Part3Meetings {
+	background-color: white;
+/*	height: 59vh;*/
+	padding: 10px;
+	color: grey;
+	overflow:scroll;
+}
+
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeed {
+	padding-left: 10px;
+	padding-top: 20px;
+	margin:0px;
+}
+
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyfeedList {
+	padding-left: 10px;
+	padding-right: 10px;
+	
+}
+
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyfeedList .userFeedImage {
+	width: 50px;
+	float: left;
+	margin-right: 10px;
+}
+
+.pageContent .pageSection2 .section2Part3 {
+	padding-right: 30px;
+
+}
+
+.pageContent .pageSection2 .section2Part3 .meetingDetails .date {
+	text-align: right;
+    width: 110px;
+    position: relative;
+    padding-top: 30px;
+
+}
+
+.pageContent .pageSection2 .section2Part3 .meetingDetails .date i {
+	position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    width: 30px;
+    text-align: center;
+    border-top: 1px solid #e7eaec;
+    border-bottom: 1px solid #e7eaec;
+    border-left: 1px solid #e7eaec;
+    background: #f8f8f8;
+}
+
+.pageContent .pageSection2 .section2Part3 .meetingDetails .meetingContent {
+	border-left: 1px solid #e7eaec;
+    border-top: 1px solid #e7eaec;
+    padding-top: 10px;
+    min-height: 100px;
 }
