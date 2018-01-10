@@ -18,7 +18,7 @@ export default class Sidebar extends React.Component {
                     </div>
                     <div className="textRight">
                         <div className="wrapper">
-                            <div className="userName">John Appleseed</div>
+                            <div className="userName">John Alexander</div>
                             <div className = "usertitle">Writer</div>
                         </div>
                     </div>

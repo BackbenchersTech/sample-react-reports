@@ -1,7 +1,8 @@
 .pageContent .pageSection1 {	
 	background-color: white;
-	margin-bottom: 20px;
+	padding: 15px;
 	color: grey;
+
 }
 
 .pageContent .pageSection1 .welcomeMsg {
@@ -58,7 +59,8 @@
 
 }
 .pageContent .pageSection2 {
-	margin-top: 20px;
+	padding: 15px;
+	padding-top: 30px;
 /*	height: 60vh;*/
 
 }
