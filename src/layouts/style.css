@@ -1,0 +1,13 @@
+.contentLayout {
+	width: calc(100% - 280px);
+	float: left;
+	padding-left: 15px;
+	background-color: #ededed;
+	height: 100vh;
+	overflow-y: scroll;
+
+}
+
+::-webkit-scrollBar {
+	display: none;
+}

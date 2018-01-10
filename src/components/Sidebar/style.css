@@ -1,56 +1,75 @@
 .sidebar {
 	min-height: 100vh;
 	max-height: 100vh;
-	background-color: #00274c;
-	color:white;
+	background-color: #263949 ;
 	overflow:hidden;
-	padding: 0px;
+	padding-left: 20px;
+	width: 280px;
+	float: left;
+	color:white;
+
 }
 
 .sidebar .userDetailsWrapper {
-	max-height: 30vh; 
-	text-align: center;
+	max-height: 22vh; 
+	padding-left: 5px;
 }
 
 .sidebar .userDetailsWrapper .appName {
-	font-size: 24px;
-	line-height: 36px;
-	padding-top: 20px;
+	font-size: 16px;
+	line-height: 20px;
+	padding-top: 10px;
 	padding-bottom: 10px;
 	margin: 0;
+	font-weight: bold;
+	text-align: center;
 }
 
-/* .sidebar .userDetailsWrapper .userImg {
-	height: 18vh;
-	padding-top: 3vh;
-} */
+ .sidebar .userDetailsWrapper .userImg {
+	height: 100px;
+	padding-top: 10px;
+} 
 
 .sidebar .userDetailsWrapper .userImg .img-circle {
-	width: 150px;
-	height: 150px;
+	width: 75px;
+	height: 75px;
 	padding: 10px;
+	float: left;
+
+
 }
 
-.sidebar .userDetailsWrapper .userDetails .userName {
-	font-size: 20px;
-	line-height: 34px;
+.sidebar .userDetailsWrapper .userImg .userName {
+	font-size: 18px;
+	line-height: 28px;
 	margin: 0px;
 	padding: 5px;
+	font-weight: bold;
+	padding-bottom: 0px;
+	padding-top: 10px;
+}
+
+.sidebar .userDetailsWrapper .userImg .usertitle {
+	font-size: 12px;
+	line-height: 20px;
+	margin: 0px;
+	padding-left: 5px;
+	font-weight: bold;
+	color: #ededed;
 }
 
 .sidebar .userReportsBlock {
 	max-height: 50vh;
 	padding-top: 10px;
-	border-top : 1px solid white;   
+ 
  	overflow-y: scroll;
+
 }
 
-/* Whose scrollbar? */
-::-webkit-scrollBar {
-	display: none;
-}
+/* Reports Scroll-Bar*/
 
-.sidebar .userReportsBlock .userReports {
+
+.sidebar .userReportsBlock .userReports, .sidebar .userReportsBlock .userReports1  {
 	list-style-type: none;
 	text-align: left;
 	padding-left: 0px;
@@ -60,37 +79,79 @@
 .sidebar .userReportsBlock .userReports li {
 	font-size: 18px;
 	line-height: 24px;
-	padding: 5px;
+	padding: 10px;
+	padding-left: 30px;
+
 }
 
+.sidebar .userReportsBlock .userReports1 li{
+	font-size: 18px;
+	line-height: 24px;
+	padding: 10px;
+
+}
+
+.sidebar .userReportsBlock .accordianMenu {
+	font-size: 18px;
+	line-height: 24px;
+	padding: 10px;
+}
+
+.sidebar .userReportsBlock .accordianMenu:active,
+.sidebar .userReportsBlock .accordianMenu:hover {
+	background-color: #ffcb05;
+ 	color: white;
+}
+
+.CustomTriggerCSS--open{
+	font-size: 18px;
+	line-height: 24px;
+	padding: 10px;
+	padding-top: 15px;
+}
 .sidebar .userReportsBlock .userReports li:active,
 .sidebar .userReportsBlock .userReports li:hover {
  	background-color: #ffcb05;
- 	color: #00274c;
+ 	color:white;
 }
 
-.sidebar .userReportsBlock .userReports li.userReportTitle a {
-	color: white;
+.sidebar .userReportsBlock .userReports1 li:active,
+.sidebar .userReportsBlock .userReports1 li:hover {
+ 	background-color: #ffcb05;
+ 	color: white;
+}
+
+.sidebar .userReportsBlock .userReports li.userReportTitle a , 
+.sidebar .userReportsBlock .userReports1 li.userReportTitle1 a {
+	color:white;
 }
 
 .sidebar .userReportsBlock .userReports li.userReportTitle a:active,
 .sidebar .userReportsBlock .userReports li.userReportTitle a:hover {
 	text-decoration: none;
-	color : #00274c;
+	color : white;
+}
+.sidebar .userReportsBlock .userReports1 li.userReportTitle1 a:active,
+.sidebar .userReportsBlock .userReports1 li.userReportTitle1 a:hover {
+	text-decoration: none;
+	color : white;
 }
 
 .sidebar .userReportsBlock .userReports li.userReportTitle a:focus {
 	text-decoration: none;
 }
 
+.sidebar .userDetailsWrapper .appName a {
+	color:white;
+}
+
 .sidebar .userFooterBlock {
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
-	width: 100%;
 	max-height: 20vh;
 	padding-top: 10px;
-	border-top : 1px solid white;
+
 }
 
 .sidebar .userFooterBlock .userFooter {
@@ -98,12 +159,18 @@
 	list-style-type: none;
 	text-align: left;
 	padding-left: 0px;
+	width: 280px;
 }
 
 .sidebar .userFooterBlock .userFooter li {
-	line-height: 24px;
+	line-height: 30px;
 	font-size: 18px;
 	padding: 5px;
+}
+
+.sidebar .userFooterBlock .userFooter li a {
+	width: 150px;
+	align-items: left;
 }
 
 .sidebar .userFooterBlock .userFooter li a:hover,
@@ -114,8 +181,9 @@
 
 .fa {
 	margin-right: 5px;
-	width: 15px;
-	text-align: center;
+	padding-left: 20px;
+	width: 50px;
+	align-items: center;
 }
 
 .sidebar .userFooterBlock .userFooter li.user_help a,
