@@ -28,13 +28,11 @@ export default class Sidebar extends React.Component {
 
 	                	<Collapsible trigger = "Reports" className = "accordianMenu" triggerOpenedClassName="CustomTriggerCSS--open">
 		                    <ul className="userReports">
-		                    	<li className="userReportTitle"><NavLink to="/app/report1">Report 1</NavLink></li>
-		                        <li className="userReportTitle"><NavLink to="/app/report2">Report 2</NavLink></li>
-		                        <li className="userReportTitle"><NavLink to="/report3">Report 3</NavLink></li>
-		                    </ul>
+                        <li className="userReportTitle"><NavLink to="/app/report1">Todos</NavLink></li>
+                        <li className="userReportTitle"><NavLink to="/app/report2">Posts</NavLink></li>
+                    </ul>
 	                    
 	                	</Collapsible>
-	                	
                 </div>
                 {/* Remove and merge into the above menu */}
                 <div className  = "userFooterBlock">

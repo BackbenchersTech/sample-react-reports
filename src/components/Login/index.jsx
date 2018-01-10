@@ -62,7 +62,6 @@ class Login extends React.Component {
         Credentials.pwd = pass;
 
         login(Credentials).then((res) => {
-            console.log(res)
             if(res) {
                 this.history.push('/app');
             }

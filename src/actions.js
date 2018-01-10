@@ -1,7 +1,6 @@
 import store from './store'
 
 export const login = (creds) => {
-    console.log(creds);
     return new Promise((resolve, reject) => {
         if(  creds.email === "admin" && creds.pwd === "admin" ) {
             setTimeout(() => {

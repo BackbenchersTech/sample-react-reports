@@ -12,14 +12,8 @@ import './style.css';
 
 
 class PrimaryLayout extends React.Component {
-    constructor(props) {
-        super(props);
-        console.log(this.props.logged)
-    }
-
     componentWillMount() {
         getLoggedUser();
-        console.log(this.props)
     }
 
     layout =
