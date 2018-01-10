@@ -1,21 +1,14 @@
 .sidebar {
 	min-height: 100vh;
 	max-height: 100vh;
-	background-color: #263949 ;
+	background-color: #2F4050;
 	overflow:hidden;
-	padding-left: 20px;
 	width: 280px;
 	float: left;
 	color:white;
-
 }
 
-.sidebar .userDetailsWrapper {
-	max-height: 22vh; 
-	padding-left: 5px;
-}
-
-.sidebar .userDetailsWrapper .appName {
+.sidebar .appName {
 	font-size: 16px;
 	line-height: 20px;
 	padding-top: 10px;
@@ -25,169 +18,181 @@
 	text-align: center;
 }
 
- .sidebar .userDetailsWrapper .userImg {
-	height: 100px;
-	padding-top: 10px;
-} 
+.sidebar .appName a {
+	text-decoration: none;
+	color: white;
+}
+
+.sidebar .userDetailsWrapper {
+	max-height: 22vh; 
+	padding-left: 5px;
+	display: flex;
+}
+
+.sidebar .userDetailsWrapper .textRight {
+    display: flex;
+    flex-wrap: wrap;
+	width: 100%;
+	align-items: center;
+    padding-left: 10px;
+}
+
+.sidebar .userDetailsWrapper .textRight>div {
+	width: 100%;
+}
 
 .sidebar .userDetailsWrapper .userImg .img-circle {
 	width: 75px;
 	height: 75px;
 	padding: 10px;
-	float: left;
-
-
 }
 
-.sidebar .userDetailsWrapper .userImg .userName {
+.sidebar .userDetailsWrapper .textRight .userName {
 	font-size: 18px;
-	line-height: 28px;
-	margin: 0px;
-	padding: 5px;
-	font-weight: bold;
-	padding-bottom: 0px;
-	padding-top: 10px;
+	line-height: 24px;
 }
 
-.sidebar .userDetailsWrapper .userImg .usertitle {
+.sidebar .userDetailsWrapper .textRight .usertitle {
 	font-size: 12px;
 	line-height: 20px;
-	margin: 0px;
-	padding-left: 5px;
-	font-weight: bold;
 	color: #ededed;
 }
 
-.sidebar .userReportsBlock {
+.sidebar .menuBlock {
 	max-height: 50vh;
 	padding-top: 10px;
- 
  	overflow-y: scroll;
-
 }
 
 /* Reports Scroll-Bar*/
 
 
-.sidebar .userReportsBlock .userReports, .sidebar .userReportsBlock .userReports1  {
+.sidebar .menuBlock .userReports,
+.sidebar .menuBlock .menuSection  {
 	list-style-type: none;
 	text-align: left;
 	padding-left: 0px;
 	margin-bottom: 0px;
 }
 
-.sidebar .userReportsBlock .userReports li {
+.sidebar .menuBlock .userReports li,
+.sidebar .menuBlock .menuSection li {
 	font-size: 18px;
 	line-height: 24px;
-	padding: 10px;
-	padding-left: 30px;
-
+	padding: 5px;
+	padding-left: 10px;
 }
 
-.sidebar .userReportsBlock .userReports1 li{
+.sidebar .menuBlock .menuSection li {
+	border-bottom: 1px solid grey;
+}
+
+.sidebar .menuBlock .menuSection:first-child li:first-child {
+	border-top: 1px solid grey;;
+}
+
+.sidebar .menuBlock .menuSection li .fa {
+	padding-right:8px;
+}
+
+.sidebar .menuBlock .userReports li {
+	padding-left: 25px;
+}
+
+.sidebar .menuBlock .Collapsible.accordionMenu {
+	padding: 5px;
+	padding-left: 10px;
+	border-left: none;
+	background-color: #2F4050;
+}
+
+.sidebar .menuBlock .Collapsible {
+	padding-top: 5px;
+	border-bottom: 1px solid grey;;
+	position: relative;
+	border-left: 5px solid cyan;
+	background-color: #293846;
+	transition: background-color 400ms;
+	transition: border-left 400ms;
+}
+
+.sidebar .menuBlock .Collapsible>span {
+	display: inline-block;
+}
+
+.sidebar .menuBlock .Collapsible>span:before {
+	display: inline-block;
+	content: '\f15c';
+	font-family: 'FontAwesome';
 	font-size: 18px;
 	line-height: 24px;
-	padding: 10px;
-
+	padding-right: 8px;
 }
 
-.sidebar .userReportsBlock .accordianMenu {
+.sidebar .menuBlock .Collapsible>span:after {
+	display: inline-block;
+	content: '\f107';
+	font-family: 'FontAwesome';
 	font-size: 18px;
 	line-height: 24px;
-	padding: 10px;
+	position: absolute;
+	right: 10px;
+	transition: transform 300ms;
 }
 
-.sidebar .userReportsBlock .accordianMenu:active,
-.sidebar .userReportsBlock .accordianMenu:hover {
+.sidebar .menuBlock .Collapsible>span.is-open:after {
+	transform: rotateZ(180deg);
+}
+
+.sidebar .menuBlock .accordionMenu span,
+.sidebar .menuBlock .accordionOpen {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.sidebar .menuBlock .accordionOpen {
+	padding-left: 10px;
+}
+
+.sidebar .menuBlock .accordionMenu:active,
+.sidebar .menuBlock .accordionMenu:hover {
 	background-color: #ffcb05;
  	color: white;
 }
 
-.CustomTriggerCSS--open{
-	font-size: 18px;
-	line-height: 24px;
-	padding: 10px;
-	padding-top: 15px;
-}
-.sidebar .userReportsBlock .userReports li:active,
-.sidebar .userReportsBlock .userReports li:hover {
+.sidebar .menuBlock .userReports li:active,
+.sidebar .menuBlock .userReports li:hover {
  	background-color: #ffcb05;
  	color:white;
 }
 
-.sidebar .userReportsBlock .userReports1 li:active,
-.sidebar .userReportsBlock .userReports1 li:hover {
+.sidebar .menuBlock .menuSection li:active,
+.sidebar .menuBlock .menuSection li:hover {
  	background-color: #ffcb05;
  	color: white;
 }
 
-.sidebar .userReportsBlock .userReports li.userReportTitle a , 
-.sidebar .userReportsBlock .userReports1 li.userReportTitle1 a {
+.sidebar .menuBlock .menuSection li.menuTitle a {
+	color: white;
+}
+
+.sidebar .menuBlock .userReports li.userReportTitle a {
 	color:white;
 }
 
-.sidebar .userReportsBlock .userReports li.userReportTitle a:active,
-.sidebar .userReportsBlock .userReports li.userReportTitle a:hover {
+.sidebar .menuBlock .userReports li.userReportTitle a:active,
+.sidebar .menuBlock .userReports li.userReportTitle a:hover {
 	text-decoration: none;
 	color : white;
 }
-.sidebar .userReportsBlock .userReports1 li.userReportTitle1 a:active,
-.sidebar .userReportsBlock .userReports1 li.userReportTitle1 a:hover {
+
+.sidebar .menuBlock .userReports li.userReportTitle a:focus {
+	text-decoration: none;
+}
+
+sidebar .menuBlock .menuSection li.menuTitle a:active,
+.sidebar .menuBlock .menuSection li.menuTitle a:hover,
+.sidebar .menuBlock .menuSection li.menuTitle a:focus {
 	text-decoration: none;
 	color : white;
-}
-
-.sidebar .userReportsBlock .userReports li.userReportTitle a:focus {
-	text-decoration: none;
-}
-
-.sidebar .userDetailsWrapper .appName a {
-	color:white;
-}
-
-.sidebar .userFooterBlock {
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	max-height: 20vh;
-	padding-top: 10px;
-
-}
-
-.sidebar .userFooterBlock .userFooter {
-	margin-bottom: 0px;
-	list-style-type: none;
-	text-align: left;
-	padding-left: 0px;
-	width: 280px;
-}
-
-.sidebar .userFooterBlock .userFooter li {
-	line-height: 30px;
-	font-size: 18px;
-	padding: 5px;
-}
-
-.sidebar .userFooterBlock .userFooter li a {
-	width: 150px;
-	align-items: left;
-}
-
-.sidebar .userFooterBlock .userFooter li a:hover,
-.sidebar .userFooterBlock .userFooter li a:active,
-.sidebar .userFooterBlock .userFooter li a:focus {
-	text-decoration: none;
-}
-
-.fa {
-	margin-right: 5px;
-	padding-left: 20px;
-	width: 50px;
-	align-items: center;
-}
-
-.sidebar .userFooterBlock .userFooter li.user_help a,
-.sidebar .userFooterBlock .userFooter li.user_settings a,
-.sidebar .userFooterBlock .userFooter li.user_logout a {
-	color:white;
 }
