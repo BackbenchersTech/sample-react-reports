@@ -17,7 +17,8 @@ export default class Sidebar extends React.Component {
         return(
             <Col className="sidebar ">
                 <div className="appName">
-                    <NavLink to="/app">React Application</NavLink>
+                    <i className="fa fa-cogs fa-spin fa-fw"></i>
+                    <NavLink to="/app">Reportify</NavLink>
                 </div>
                 <div className="userDetailsWrapper">
                     <div className="userImg">

@@ -64,8 +64,11 @@ class ReportStyle1 extends React.Component {
 
     render() {
         return (
-            <div>
-                <h2>Todos Report</h2>
+            <div className = "ReportStyle1Class">
+                <div className = "ReportStyle1Heading">
+                <h2 className = "ReportStyle1Header">
+                    Todos Report</h2>
+                </div>
                 {this.state.users.length>0 && 
                 <BootstrapTable data={this.state.list} striped hover pagination search multiColumnSearch exportCSV insertRow deleteRow selectRow={ this.selectRowProp } cellEdit={ this.cellEditProp } options={this.options} >
                     <TableHeaderColumn dataField='id' isKey dataSort>PostId</TableHeaderColumn>

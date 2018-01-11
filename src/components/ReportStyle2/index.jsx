@@ -41,7 +41,7 @@ class ReportStyle2 extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="reportStyle2Class">
                 <h2>Posts Report</h2>
 				{ (this.state.list.length>0)?
 					(this.state.list.map(post =>

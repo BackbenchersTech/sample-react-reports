@@ -10,3 +10,29 @@
 .fa-times {
     color: #FF7878;
 }
+
+.contentLayout .ReportStyle1Class  .ReportStyle1Heading {
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.1), -1px -1px 2px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+.contentLayout .ReportStyle1Class {
+	padding: 15px 50px;
+	background-color: #ededed;
+	height: 100vh;
+	overflow: scroll;
+}
+
+.contentLayout .ReportStyle1Class  .ReportStyle1Heading .ReportStyle1Header {
+	margin-bottom: 0px;
+}
+
+.react-bs-table-container {
+	background-color: white;	
+	padding: 20px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.1), -1px -1px 2px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}

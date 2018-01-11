@@ -7,6 +7,7 @@
 	background-color: white;
 	padding: 15px;
 	color: grey;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.1), -1px -1px 2px rgba(0,0,0,0.1);
 }
 
 .pageContent .pageSection1 .welcomeMsg {
@@ -78,6 +79,7 @@
 .pageContent .pageSection2 .section2Part1 {
 	/*height: 59vh;*/
 	color: grey;
+
 }
 
 .pageContent .pageSection2 .section2Part1 .section2Part1Row1 {
@@ -85,6 +87,7 @@
 	margin-bottom: 25px;
 /*	height: 16vh;*/
 	padding: 10px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.1), -1px -1px 2px rgba(0,0,0,0.1);
 }
 
 .pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsTitle {
@@ -121,6 +124,7 @@
 	background-color: white;
 	padding: 10px;
 	overflow:scroll;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.1), -1px -1px 2px rgba(0,0,0,0.1);
 }
 
 .pageContent .pageSection2 .section2Part1 .section2Part1Row2 .CommentsTitle{
@@ -147,6 +151,7 @@
 	padding: 10px;
 	color: grey;
 	overflow:scroll;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.1), -1px -1px 2px rgba(0,0,0,0.1);
 }
 
 .pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeed {
@@ -199,5 +204,6 @@
 	.pageContent .pageSection2 .section2Part2,
 	.pageContent .pageSection2 .section2Part3 {
 		margin-top: 25px;
+		
 	}
    }

@@ -37,7 +37,7 @@ class Card extends React.Component {
             <div className="card">
                 <div className="cardHeader">
                     <div className="userImg">
-                        <img className="img-circle" src="http://www.oiioproperty.com/Images/article/2016051402425466.png" alt="User Profile Pic"/>
+                        <img className="img-circle" src="http://i.dailymail.co.uk/i/pix/2017/04/20/13/3F6B966D00000578-4428630-image-m-80_1492690622006.jpg" alt="User Profile Pic"/>
                     </div>
                     <div className="textRight">
                         <div className="userName">{this.getUserName(this.props.post.userId)}</div>

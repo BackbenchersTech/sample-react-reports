@@ -1,3 +1,10 @@
 h2 {
     margin-top: 0px;
 }
+
+.contentLayout .reportStyle2Class {
+	padding: 15px 50px;
+	background-color: #ededed;
+	height: 100vh;
+	overflow: scroll;
+}
