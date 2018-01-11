@@ -28,7 +28,7 @@ const DashHome = ({ history }) => (
        </div>
 
        <div className = "row pageSection2">
-	        <div className="section2Part1 col-xs-4 col-sm-4 col-md-4">
+	        <div className="section2Part1 col-xs-12 col-md-4">
 	        	<div className = "section2Part1Row1">
 	            	<h4 className = "NewsTitle">New data </h4>
 	            	<hr/>
@@ -52,7 +52,7 @@ const DashHome = ({ history }) => (
 	           		
 	            </div>
 	        </div>
-	        <div className = "section2Part2 col-xs-4 col-sm-4 col-md-4">
+	        <div className = "section2Part2 col-xs-12 col-md-4">
 	        	<div className = "section2Part2Feed">
 	        		<h4 className = "dailyFeed">Your daily feed </h4>
 	           		<hr/>
@@ -112,7 +112,7 @@ const DashHome = ({ history }) => (
 	        	</div>
 	        </div>
 
-	        <div className = "section2Part3 col-xs-4 col-sm-4 col-md-4">
+	        <div className = "section2Part3 col-xs-12 col-md-4">
 	        	<div className = "section2Part3Meetings">
 	        		<h4 className = "Meetingstitle">You have a meeting Today!!</h4>
 	        		<small><i className="fa fa-map-marker"></i> Meeting is at 10:00am. Check your schedule to see detail.</small>

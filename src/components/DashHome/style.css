@@ -167,11 +167,6 @@
 	margin-right: 10px;
 }
 
-.pageContent .pageSection2 .section2Part3 {
-	padding-right: 30px;
-
-}
-
 .pageContent .pageSection2 .section2Part3 .meetingDetails .date {
 	text-align: right;
     width: 110px;
@@ -199,3 +194,10 @@
     padding-top: 10px;
     min-height: 100px;
 }
+
+@media only screen and (max-width: 991px) {
+	.pageContent .pageSection2 .section2Part2,
+	.pageContent .pageSection2 .section2Part3 {
+		margin-top: 25px;
+	}
+   }
