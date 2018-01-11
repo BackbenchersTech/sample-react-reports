@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import Card from '../Card';
 
+import './style.css';
 import '../../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 
 class ReportStyle2 extends React.Component {

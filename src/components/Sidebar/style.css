@@ -5,13 +5,13 @@
 	overflow:hidden;
 	width: 280px;
 	float: left;
-	color:white;
+	color:#A7B1C2;
 }
 
 .sidebar .appName {
 	font-size: 16px;
 	line-height: 20px;
-	padding-top: 10px;
+	padding-top: 25px;
 	padding-bottom: 10px;
 	margin: 0;
 	font-weight: bold;
@@ -20,12 +20,13 @@
 
 .sidebar .appName a {
 	text-decoration: none;
-	color: white;
+	color: #f2f2f2;
 }
 
 .sidebar .userDetailsWrapper {
-	max-height: 22vh; 
-	padding-left: 5px;
+	max-height: 22vh;
+	padding: 14px 5px;
+	padding-left: 25px;
 	display: flex;
 }
 
@@ -34,7 +35,7 @@
     flex-wrap: wrap;
 	width: 100%;
 	align-items: center;
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 .sidebar .userDetailsWrapper .textRight>div {
@@ -50,17 +51,16 @@
 .sidebar .userDetailsWrapper .textRight .userName {
 	font-size: 18px;
 	line-height: 24px;
+	color: #EDEDED;
 }
 
 .sidebar .userDetailsWrapper .textRight .usertitle {
-	font-size: 12px;
-	line-height: 20px;
-	color: #ededed;
+	font-size: 11px;
+	color: #d9d9d9;
 }
 
 .sidebar .menuBlock {
 	max-height: 50vh;
-	padding-top: 10px;
  	overflow-y: scroll;
 }
 
@@ -75,66 +75,65 @@
 	margin-bottom: 0px;
 }
 
-.sidebar .menuBlock .userReports li,
 .sidebar .menuBlock .menuSection li {
-	font-size: 18px;
-	line-height: 24px;
-	padding: 5px;
-	padding-left: 10px;
+	font-size: 15px;
+	padding: 14px 5px;
+	padding-left: 25px;
+	color: #A7B1C2;
 }
 
-.sidebar .menuBlock .menuSection li {
-	border-bottom: 1px solid grey;
-}
-
-.sidebar .menuBlock .menuSection:first-child li:first-child {
-	border-top: 1px solid grey;;
+.sidebar .menuBlock .menuSection li.active {
+	border-left: 5px solid #FFFF00;
+	color: white;
 }
 
 .sidebar .menuBlock .menuSection li .fa {
 	padding-right:8px;
+	color: inherit;
 }
 
 .sidebar .menuBlock .userReports li {
-	padding-left: 25px;
+	font-size: 15px;
+	padding: 5px;
+	padding-left: 48px;
+}
+
+.sidebar .menuBlock .userReports li:last-child {
+	padding-bottom: 10px;
 }
 
 .sidebar .menuBlock .Collapsible.accordionMenu {
-	padding: 5px;
-	padding-left: 10px;
+	padding: 14px 5px;
+	padding-left: 25px;
 	border-left: none;
 	background-color: #2F4050;
 }
 
 .sidebar .menuBlock .Collapsible {
-	padding-top: 5px;
-	border-bottom: 1px solid grey;;
+	padding-top: 14px;
 	position: relative;
-	border-left: 5px solid cyan;
+	border-left: 5px solid #FFFF00;
 	background-color: #293846;
 	transition: background-color 400ms;
 	transition: border-left 400ms;
 }
 
-.sidebar .menuBlock .Collapsible>span {
-	display: inline-block;
-}
-
 .sidebar .menuBlock .Collapsible>span:before {
+	cursor: pointer;
 	display: inline-block;
 	content: '\f15c';
 	font-family: 'FontAwesome';
-	font-size: 18px;
-	line-height: 24px;
+	font-size: 15px;
+	line-height: 15px;
 	padding-right: 8px;
 }
 
 .sidebar .menuBlock .Collapsible>span:after {
+	cursor: pointer;
 	display: inline-block;
 	content: '\f107';
 	font-family: 'FontAwesome';
-	font-size: 18px;
-	line-height: 24px;
+	font-size: 15px;
 	position: absolute;
 	right: 10px;
 	transition: transform 300ms;
@@ -146,44 +145,57 @@
 
 .sidebar .menuBlock .accordionMenu span,
 .sidebar .menuBlock .accordionOpen {
-	font-size: 18px;
-	line-height: 24px;
+	font-size: 15px;
+	cursor: pointer;
 }
 
+/* span */
 .sidebar .menuBlock .accordionOpen {
-	padding-left: 10px;
+	padding-left: 25px;
+	padding-bottom: 14px;
+	display: inline-block;
+	color: white;
+}
+
+.sidebar .menuBlock .accordionOpen:before,
+.sidebar .menuBlock .accordionOpen:after {
+	color: white;
 }
 
 .sidebar .menuBlock .accordionMenu:active,
 .sidebar .menuBlock .accordionMenu:hover {
-	background-color: #ffcb05;
+	background-color: #293846;
  	color: white;
+}
+
+.sidebar .menuBlock .accordionMenu:hover span:before,
+.sidebar .menuBlock .accordionMenu:hover span:after {
+	color: white;
 }
 
 .sidebar .menuBlock .userReports li:active,
 .sidebar .menuBlock .userReports li:hover {
- 	background-color: #ffcb05;
  	color:white;
 }
 
 .sidebar .menuBlock .menuSection li:active,
 .sidebar .menuBlock .menuSection li:hover {
- 	background-color: #ffcb05;
+ 	background-color: #293846;
  	color: white;
 }
 
 .sidebar .menuBlock .menuSection li.menuTitle a {
-	color: white;
+	color: inherit;
 }
 
 .sidebar .menuBlock .userReports li.userReportTitle a {
-	color:white;
+	color: inherit;
 }
 
 .sidebar .menuBlock .userReports li.userReportTitle a:active,
 .sidebar .menuBlock .userReports li.userReportTitle a:hover {
 	text-decoration: none;
-	color : white;
+	color : inherit;
 }
 
 .sidebar .menuBlock .userReports li.userReportTitle a:focus {
@@ -194,5 +206,5 @@ sidebar .menuBlock .menuSection li.menuTitle a:active,
 .sidebar .menuBlock .menuSection li.menuTitle a:hover,
 .sidebar .menuBlock .menuSection li.menuTitle a:focus {
 	text-decoration: none;
-	color : white;
+	color : inherit;
 }

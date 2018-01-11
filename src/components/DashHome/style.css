@@ -1,8 +1,12 @@
+.pageContent {
+	background-color: #EDEDED;
+	padding: 0 15px;
+}
+
 .pageContent .pageSection1 {	
 	background-color: white;
 	padding: 15px;
 	color: grey;
-
 }
 
 .pageContent .pageSection1 .welcomeMsg {
