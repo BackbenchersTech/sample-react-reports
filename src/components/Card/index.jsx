@@ -9,6 +9,8 @@ class Card extends React.Component {
         this.state = {
             users: []
         }
+
+        this.getUserName = this.getUserName.bind(this);
     }
 
     componentWillMount() {

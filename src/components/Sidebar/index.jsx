@@ -11,14 +11,30 @@ export default class Sidebar extends React.Component {
         this.state = {
             activeIndex: 0
         }
+
+        this.handleNavItemClick = this.handleNavItemClick.bind(this);
+        this.handleAccItemClick = this.handleAccItemClick.bind(this);
+    }
+
+    handleNavItemClick(index) {
+        this.setState({
+            activeIndex: index
+        });
+    }
+
+    handleAccItemClick(index, e) {
+        e.preventDefault();
+        this.setState({
+            activeIndex: index
+        });
+        e.defaultPrevented = false;
     }
 
     render() {   
         return(
             <Col className="sidebar ">
                 <div className="appName">
-                    <i className="fa fa-cogs fa-spin fa-fw"></i>
-                    <NavLink to="/app">Reportify</NavLink>
+                    <NavLink to="/app" onClick={() => this.handleNavItemClick(0)}>React Application</NavLink>
                 </div>
                 <div className="userDetailsWrapper">
                     <div className="userImg">
@@ -34,28 +50,28 @@ export default class Sidebar extends React.Component {
                     
                 <div className="menuBlock">
                     <ul className="menuSection">
-                        <li className={this.state.activeIndex === 0? "menuTitle active" : "menuTitle"}>
+                        <li className={this.state.activeIndex === 0? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(0)}>
                             <i className="fa fa-home"></i>
                             <NavLink to="/app">Home</NavLink>
                         </li>
                     </ul>
                     {/* Accordion style for reports */}
-                    <Collapsible trigger="Reports" className="accordionMenu" transitionTime={400} easing={'cubic-bezier(0.175, 0.885, 0.32, 2.275)'} triggerOpenedClassName="accordionOpen">
+                    <Collapsible trigger="Reports" className={this.state.activeIndex === 11? "accordionMenu active" : "accordionMenu"} transitionTime={400} easing={'cubic-bezier(0.175, 0.885, 0.32, 2.275)'} triggerOpenedClassName="accordionOpen">
                         <ul className="userReports">
-                            <li className="userReportTitle"><NavLink exact to="/app/report1" activeClassName="active">Todos</NavLink></li>
-                            <li className="userReportTitle"><NavLink  to="/app/report2" activeClassName="active">Posts</NavLink></li>
+                            <li className="userReportTitle"><NavLink exact to="/app/report1" activeClassName="active" onClick={(e) => this.handleAccItemClick(11,e)}>Todos</NavLink></li>
+                            <li className="userReportTitle"><NavLink  to="/app/report2" activeClassName="active" onClick={(e) => this.handleAccItemClick(11,e)}>Posts</NavLink></li>
                         </ul>
                     </Collapsible>
                     <ul className="menuSection">
-                        <li className={this.state.activeIndex === 1? "menuTitle active" : "menuTitle"}>
+                        <li className={this.state.activeIndex === 1? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(1)}>
                             <i className="fa fa-info-circle" aria-hidden="true"></i>
-                            <NavLink to="/help">Help</NavLink>
+                            <NavLink to="/app/report1">Help</NavLink>
                         </li>
-                        <li className={this.state.activeIndex === 2? "menuTitle active" : "menuTitle"}>
+                        <li className={this.state.activeIndex === 2? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(2)}>
                             <i className="fa fa-cog" aria-hidden="true"></i>
                             <NavLink to="/settings">Settings</NavLink>
                         </li>
-                        <li className={this.state.activeIndex === 3? "menuTitle active" : "menuTitle"}>
+                        <li className="menuTitle">
                             <i className="fa fa-power-off" aria-hidden="true"></i>
                             <NavLink to="/logout">Logout</NavLink>
                         </li>

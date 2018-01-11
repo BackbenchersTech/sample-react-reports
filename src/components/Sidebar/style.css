@@ -81,6 +81,7 @@
 }
 
 .sidebar .menuBlock .menuSection li {
+	cursor: pointer;
 	font-size: 15px;
 	padding: 14px 5px;
 	padding-left: 25px;
@@ -90,6 +91,7 @@
 .sidebar .menuBlock .menuSection li.active {
 	border-left: 5px solid #FFFF00;
 	color: white;
+	background-color: #293846;
 }
 
 .sidebar .menuBlock .menuSection li .fa {
@@ -112,6 +114,10 @@
 	padding-left: 25px;
 	border-left: none;
 	background-color: #2F4050;
+}
+
+.sidebar .menuBlock .Collapsible.active {
+	border-left: 5px solid #FFFF00;
 }
 
 .sidebar .menuBlock .Collapsible {
@@ -152,13 +158,13 @@
 .sidebar .menuBlock .accordionOpen {
 	font-size: 15px;
 	cursor: pointer;
+	display: block;
 }
 
 /* span */
 .sidebar .menuBlock .accordionOpen {
 	padding-left: 25px;
 	padding-bottom: 14px;
-	display: inline-block;
 	color: white;
 }
 
@@ -195,6 +201,11 @@
 
 .sidebar .menuBlock .userReports li.userReportTitle a {
 	color: inherit;
+}
+
+.sidebar .menuBlock .userReports li.userReportTitle a.active {
+	color: white;
+	font-weight: bold;
 }
 
 .sidebar .menuBlock .userReports li.userReportTitle a:active,
