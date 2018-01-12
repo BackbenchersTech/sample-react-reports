@@ -1,0 +1,210 @@
+.pageContent {
+	background-color: #EDEDED;
+	padding: 0 15px;
+}
+
+.pageContent .pageSection1 {	
+	background-color: white;
+	padding: 15px;
+	color: grey;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.1), -1px -1px 2px rgba(0,0,0,0.1);
+}
+
+.pageContent .pageSection1 .welcomeMsg {
+	padding: 20px;
+	overflow: scroll;
+}
+
+.pageContent .pageSection1 .welcomeMsg .reportsNotificationList {
+	list-style-type: decimal;
+	max-height: 20vh;
+	padding-top:10px;
+	
+}
+.pageContent .pageSection1 .welcomeMsg .reportsNotificationList li {
+	padding: 10px;
+	border-bottom: 1px solid #ededed;
+}
+.pageContent .pageSection1 .graphSection{
+	padding: 30px;
+	padding-top: 40px;
+	overflow: scroll;	
+}
+
+.pageContent .pageSection1 .graphSection .graphImage {
+	height:250px;
+	width: 100%;
+}
+
+.pageContent .pageSection1 .piegraphSection {
+	padding: 20px;
+	padding-right: 30px;
+	overflow: scroll;
+}
+
+.pageContent .pageSection1 .piegraphSection .piegraphTitle {
+	font-size: 18px;
+	padding-left: 5px;
+}
+.pageContent .pageSection1 .piegraphSection .piegraphSubtitle,
+.pageContent .pageSection1 .piegraphSection .piegraphDescription {
+	font-size: 13px;
+	padding: 5px;
+	color: grey;
+}
+
+.pageContent .pageSection1 .piegraphSection .piegraphDescription  {
+	padding-top: 20px;
+}
+
+.pageContent .pageSection1 .piegraphSection .pieChartImage {
+	height : 125px;
+	width : initial;
+
+
+}
+.pageContent .pageSection2 {
+	padding: 15px;
+	padding-top: 30px;
+/*	height: calc(100vh - 330px);
+*/
+}
+
+/*.pageContent .pageSection2 .section2Part2 , 
+.pageContent .pageSection2 .section2Part3 {
+	height: 59vh;
+
+}*/
+
+.pageContent .pageSection2 .section2Part1 {
+	/*height: calc(100vh - 370px);*/
+	color: grey;
+
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row1 {
+	background-color: white;
+	margin-bottom: 25px;
+/*	height: 16vh;*/
+	padding: 10px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.1), -1px -1px 2px rgba(0,0,0,0.1);
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsTitle {
+	padding-left: 10px;
+	padding-top: 20px;
+	margin:0px;
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsDetails{
+	display:inline;
+	width: 50%;
+}
+.pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsImage{
+	display:inline;
+	float: right;
+	padding-right: 10px;
+	margin-top: -30px;
+	overflow: scroll;
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsImage .barchartStock {
+	width: 100px;
+	height: 50px;
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsTitle1,
+.pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsSubtitle
+{
+	padding-left: 10px;
+
+}
+.pageContent .pageSection2 .section2Part1 .section2Part1Row2 {
+	/*height: calc(100% - 65%);*/
+	background-color: white;
+	padding: 10px;
+	overflow:scroll;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.1), -1px -1px 2px rgba(0,0,0,0.1);
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row2 .CommentsTitle{
+	padding-left: 10px;
+	padding-top: 20px;
+	margin:0px;
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row2 .Comments {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row2 .barschartStock {
+	height:100px;
+	width: 80%;
+	padding-left: 20px;
+	padding-bottom: 10px;
+}
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed,
+.pageContent .pageSection2 .section2Part3 .section2Part3Meetings {
+	background-color: white;
+/*	height: 59vh;*/
+/*	height: calc(100vh - 370px);*/
+	padding: 10px;
+	color: grey;
+	overflow:scroll;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.1), -1px -1px 2px rgba(0,0,0,0.1);
+}
+
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeed {
+	padding-left: 10px;
+	padding-top: 20px;
+	margin:0px;
+}
+
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyfeedList {
+	padding-left: 10px;
+	padding-right: 10px;
+	
+}
+
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyfeedList .userFeedImage {
+	width: 50px;
+	float: left;
+	margin-right: 10px;
+}
+
+.pageContent .pageSection2 .section2Part3 .meetingDetails .date {
+	text-align: right;
+    width: 110px;
+    position: relative;
+    padding-top: 30px;
+
+}
+
+.pageContent .pageSection2 .section2Part3 .meetingDetails .date i {
+	position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    width: 30px;
+    text-align: center;
+    border-top: 1px solid #e7eaec;
+    border-bottom: 1px solid #e7eaec;
+    border-left: 1px solid #e7eaec;
+    background: #f8f8f8;
+}
+
+.pageContent .pageSection2 .section2Part3 .meetingDetails .meetingContent {
+	border-left: 1px solid #e7eaec;
+    border-top: 1px solid #e7eaec;
+    padding-top: 10px;
+    min-height: 100px;
+}
+
+@media only screen and (max-width: 991px) {
+	.pageContent .pageSection2 .section2Part2,
+	.pageContent .pageSection2 .section2Part3 {
+		margin-top: 25px;
+		
+	}
+   }

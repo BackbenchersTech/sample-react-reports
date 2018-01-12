@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
+import Card from '../Card';
+
+import './style.css';
 import '../../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 
 class ReportStyle2 extends React.Component {
@@ -9,6 +11,7 @@ class ReportStyle2 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+			pending: false,
 			list: [],
 			cols: []
 		};
@@ -17,7 +20,7 @@ class ReportStyle2 extends React.Component {
 		};
     }
 
-	componentWillMount(){
+	componentDidMount(){
 		let currentComponent = this;
 		axios.get('https://jsonplaceholder.typicode.com/posts')
 			.then(function (response) {
@@ -36,15 +39,15 @@ class ReportStyle2 extends React.Component {
 		return Object.keys(data);
 	}
 
-    render() {	
+    render() {
         return (
-            <div>
-                <h2> Report Style 2</h2>
-				<BootstrapTable data={this.state.list} striped hover pagination search multiColumnSearch exportCSV keyField='id' options={this.options} >
-					{this.state.cols.map(column =>
-						<TableHeaderColumn dataField={column} dataSort>{column}</TableHeaderColumn>
-					)}
-				</BootstrapTable> 
+            <div className="reportStyle2Class">
+                <h2>Posts Report</h2>
+				{ (this.state.list.length>0)?
+					(this.state.list.map(post =>
+						<Card post={post} />))
+					:"Data Loading..."
+				}
             </div>
         );
     }

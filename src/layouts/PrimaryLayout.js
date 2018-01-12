@@ -9,21 +9,19 @@ import ReportStyle1 from '../components/ReportStyle1';
 import ReportStyle2 from '../components/ReportStyle2';
 import { getLoggedUser } from '../actions'
 
-class PrimaryLayout extends React.Component {
-    constructor(props) {
-        super(props);
-        console.log(this.props.logged)
-    }
+import './style.css';
 
+
+class PrimaryLayout extends React.Component {
     componentWillMount() {
         getLoggedUser();
-        console.log(this.props)
     }
 
     layout =
      <div className="primaryLayout">
+
         <Sidebar />
-        <Col xs={9} md={10}>
+        <Col className= "contentLayout" >
             <Switch>
                 <Route path={`${this.props.match.path}`} exact component={DashHome} />
                 {/* <Route path={`${match.path}/report1`} component={ReportPage} /> sublayout and further links and routing */}
