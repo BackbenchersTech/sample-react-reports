@@ -51,8 +51,10 @@ export default class Sidebar extends React.Component {
                 <div className="menuBlock">
                     <ul className="menuSection">
                         <li className={this.state.activeIndex === 0? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(0)}>
-                            <i className="fa fa-home"></i>
-                            <NavLink to="/app">Home</NavLink>
+                            <NavLink to="/app">
+                                <i className="fa fa-home"></i>
+                                <span>Home</span>
+                            </NavLink>
                         </li>
                     </ul>
                     {/* Accordion style for reports */}
@@ -64,16 +66,24 @@ export default class Sidebar extends React.Component {
                     </Collapsible>
                     <ul className="menuSection">
                         <li className={this.state.activeIndex === 1? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(1)}>
-                            <i className="fa fa-info-circle" aria-hidden="true"></i>
-                            <NavLink to="/app/report1">Help</NavLink>
+                            <NavLink to="/app/report1">
+                                <i className="fa fa-info-circle" aria-hidden="true"></i>
+                                <span>Help</span>
+                            </NavLink>
                         </li>
-                        {/*<li className={this.state.activeIndex === 2? "menuTitle active" : "menuTitle"}>
-                            <i className="fa fa-cog" aria-hidden="true"></i>
-                            <NavLink to="/settings">Settings</NavLink>
-                        </li>*/}
-                        <li className={this.state.activeIndex === 3? "menuTitle active" : "menuTitle"}>
-                            <i className="fa fa-power-off" aria-hidden="true"></i>
-                            <NavLink to="/logout">Logout</NavLink>
+                        {/* <li className={this.state.activeIndex === 2? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(2)}>
+                            <NavLink to="/settings">
+                                <i className="fa fa-cog" aria-hidden="true"></i>
+                                <span>Settings</span>
+                            </NavLink>
+                        </li> */}
+                    </ul>
+                    <ul className="menuSection hugBottom">
+                        <li className="menuTitle">
+                            <NavLink className="specialLink" to="/logout">
+                                <i className="fa fa-power-off"></i>
+                                <span>Logout</span>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

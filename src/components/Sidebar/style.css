@@ -6,6 +6,7 @@
 	width: 280px;
 	float: left;
 	color:#A7B1C2;
+	position: relative;
 }
 
 .sidebar .appName {
@@ -65,7 +66,6 @@
 }
 
 .sidebar .menuBlock {
-	max-height: 50vh;
  	overflow-y: scroll;
 }
 
@@ -78,10 +78,7 @@
 }
 
 .sidebar .menuBlock .menuSection li {
-	cursor: pointer;
 	font-size: 15px;
-	padding: 14px 5px;
-	padding-left: 25px;
 	color: #A7B1C2;
 }
 
@@ -96,10 +93,12 @@
 	color: inherit;
 }
 
+.sidebar .menuBlock .menuSection .menuTitle a {
+	display: block;
+	padding: 14px 5px 14px 25px;
+}
 
 .sidebar .menuBlock .Collapsible.accordionMenu {
-	padding: 14px 5px;
-	padding-left: 25px;
 	border-left: none;
 	background-color: #2F4050;
 }
@@ -133,13 +132,11 @@
 	text-decoration: none;
 }
 
-
 .sidebar .menuBlock .Collapsible.active {
 	border-left: 5px solid #FFFF00;
 }
 
 .sidebar .menuBlock .Collapsible {
-	padding-top: 14px;
 	position: relative;
 	border-left: 5px solid #FFFF00;
 	background-color: #293846;
@@ -177,6 +174,8 @@
 	font-size: 15px;
 	cursor: pointer;
 	display: block;
+	padding: 14px 5px;
+	padding-left: 25px;
 }
 
 /* span */
@@ -217,10 +216,27 @@
 	color: inherit;
 }
 
-
 .sidebar .menuBlock .menuSection li.menuTitle a:active,
 .sidebar .menuBlock .menuSection li.menuTitle a:hover,
 .sidebar .menuBlock .menuSection li.menuTitle a:focus {
 	text-decoration: none;
 	color : inherit;
+}
+
+.sidebar .menuBlock .menuSection.hugBottom {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	box-shadow: inset 0 0 100px #000000;
+}
+
+.sidebar .menuBlock .hugBottom .menuTitle .specialLink {
+	background-color: #FFFF00;
+	color: #293846;
+}
+
+.sidebar .menuBlock .hugBottom .menuTitle .specialLink:hover {
+	background-color: #F2F20D;
+	color: #293846;
 }

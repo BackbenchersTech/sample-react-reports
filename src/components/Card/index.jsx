@@ -13,7 +13,7 @@ class Card extends React.Component {
         this.getUserName = this.getUserName.bind(this);
     }
 
-    componentWillMount() {
+    componentDidMount() {
         let currentComponent = this;
 		axios.get('https://jsonplaceholder.typicode.com/users')
 			.then(function (response) {

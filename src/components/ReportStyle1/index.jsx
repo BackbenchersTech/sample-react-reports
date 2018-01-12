@@ -69,7 +69,8 @@ class ReportStyle1 extends React.Component {
                 <h2 className = "ReportStyle1Header">
                     Todos Report</h2>
                                 {this.state.users.length>0 && 
-                <BootstrapTable data={this.state.list} striped hover pagination search multiColumnSearch exportCSV insertRow deleteRow selectRow={ this.selectRowProp } cellEdit={ this.cellEditProp } options={this.options} >
+                <BootstrapTable data={this.state.list} striped hover pagination search multiColumnSearch exportCSV insertRow deleteRow selectRow={ this.selectRowProp } cellEdit={ this.cellEditProp } options={this.options} 
+                                containerClass="table">
                     <TableHeaderColumn dataField='id' isKey dataSort>PostId</TableHeaderColumn>
                     <TableHeaderColumn dataField='userId' dataFormat={this.userFormatter} dataSort>UserId</TableHeaderColumn>
                     <TableHeaderColumn dataField='title' dataSort>Title</TableHeaderColumn>
