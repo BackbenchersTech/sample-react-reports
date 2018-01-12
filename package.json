@@ -2,6 +2,7 @@
   "name": "sample-react-reports",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://BackbenchersTech.github.io/sample-react-reports",
   "dependencies": {
     "axios": "^0.17.1",
     "express": "^4.16.2",
@@ -9,18 +10,24 @@
     "react": "^16.2.0",
     "react-bootstrap": "^0.31.5",
     "react-bootstrap-table": "^4.3.0",
+    "react-collapsible": "^2.0.3",
     "react-dom": "^16.2.0",
     "react-dom-factories": "^1.0.2",
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "redux": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "start:server": "nodemon server",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build&&gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   }
 }

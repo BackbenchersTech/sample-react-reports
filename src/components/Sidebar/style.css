@@ -1,119 +1,242 @@
-.dashboardSidebar {
-	height: 100vh;
-	background-color: #00274c;
-	color:white;
+.sidebar {
+	min-height: 100vh;
+	max-height: 100vh;
+	background-color: #2F4050;
 	overflow:hidden;
-
+	width: 280px;
+	float: left;
+	color:#A7B1C2;
+	position: relative;
 }
 
-.userDetailsWrapper {
-	height: 30vh; 
-	text-align: center;
-}
-
-.userImg {
-	height: 18vh;
-	padding-top: 3vh;
-
-}
-.img-circle {
-	width: 100px;
-	height: 100px;
-	padding: 10px;
-	
-}
-.userName {
-	height: 7vh;
-	font-size: 20px;
+.sidebar .appName {
+	font-size: 16px;
+	line-height: 20px;
+	padding-top: 25px;
+	padding-bottom: 10px;
+	margin: 0;
 	font-weight: bold;
-	padding-top: 1vh
-}
-.Parent {
-	overflow: hidden;
-	height: 50vh;
-
-}
-.userReportsBlock {
-	height: 50vh;
-	border-top : 1px solid white;   
- 	overflow-y: scroll;
-
+	padding-left: 25px;
 }
 
-::-webkit-scrollBar{
-	display: none;
-}
-
-.userReports {
-	list-style-type: none;
-	text-align: left;
-	padding-left: 0px !important;
-	padding-top: 15px;
-	/*display: table-cell;
-	vertical-align: middle;
-*/
-
-}
-.userReports li  {
-	height: 5vh;
-	font-size: 18px;
-	font-weight: bold;
-	padding: 5px;
-	display: flex;
-  	align-items: center
-
-}
-
-.userReports li:active,
-.userReports li:hover
- {
- 	background-color: #ffcb05;
- 	color: #00274c;
-}
-
-.userReports li.userReportTitle a {
+.sidebar .appName .fa {
+	margin-right: 4px;
 	color: white;
 }
 
-.userReports li.userReportTitle a:active,
-.userReports li.userReportTitle a:hover {
-	color : #00274c;
+.sidebar .appName a {
+	text-decoration: none;
+	color: #f2f2f2;
 }
 
-.userFooterBlock {
-	height: 18vh;
-	text-align: center;
-	border-top : 1px solid white;
+.sidebar .userDetailsWrapper {
+	max-height: 22vh;
+	padding: 14px 5px;
+	padding-left: 25px;
+	display: flex;
 }
 
-.userFooter {
-	margin-bottom: 0px;
+.sidebar .userDetailsWrapper .userImg .img-circle {
+	width: 75px;
+	height: 75px;
+	padding: 10px;
+}
+
+.sidebar .userDetailsWrapper .textRight {
+    display: flex;
+    flex-wrap: wrap;
+	width: 100%;
+	align-items: center;
+    padding-left: 5px;
+}
+
+.sidebar .userDetailsWrapper .textRight>div {
+	width: 100%;
+}
+
+.sidebar .userDetailsWrapper .textRight .userName {
+	font-size: 18px;
+	line-height: 24px;
+	color: #EDEDED;
+}
+
+.sidebar .userDetailsWrapper .textRight .usertitle {
+	font-size: 11px;
+	color: #d9d9d9;
+}
+
+.sidebar .menuBlock {
+ 	overflow-y: scroll;
+}
+
+.sidebar .menuBlock .userReports,
+.sidebar .menuBlock .menuSection  {
 	list-style-type: none;
 	text-align: left;
-	padding-left: 0px !important;
-	margin-top: 1vh;
+	padding-left: 0px;
+	margin-bottom: 0px;
 }
 
-.userFooter li {
-	padding: 7px;
-	height: 6vh;
-	font-size: 18px;
+.sidebar .menuBlock .menuSection li {
+	font-size: 15px;
+	color: #A7B1C2;
+}
+
+.sidebar .menuBlock .menuSection li.active {
+	border-left: 5px solid #FFFF00;
+	color: white;
+	background-color: #293846;
+}
+
+.sidebar .menuBlock .menuSection li .fa {
+	padding-right:8px;
+	color: inherit;
+}
+
+.sidebar .menuBlock .menuSection .menuTitle a {
+	display: block;
+	padding: 14px 5px 14px 25px;
+}
+
+.sidebar .menuBlock .Collapsible.accordionMenu {
+	border-left: none;
+	background-color: #2F4050;
+}
+
+.sidebar .menuBlock .userReports li {
+	font-size: 15px;
+	padding: 5px;
+	padding-left: 48px;
+}
+
+.sidebar .menuBlock .userReports li:last-child {
+	padding-bottom: 10px;
+}
+
+.sidebar .menuBlock .userReports li.userReportTitle a {
+	color: inherit;
+}
+
+.sidebar .menuBlock .userReports li.userReportTitle a.active {
+	color: white;
 	font-weight: bold;
-	padding-top: 15px;
 }
 
-.fa {
-	margin-right: 5px;
+.sidebar .menuBlock .userReports li.userReportTitle a:active,
+.sidebar .menuBlock .userReports li.userReportTitle a:hover {
+	text-decoration: none;
+	color : inherit;
 }
 
-.user_help a,
-.user_settings a,
-.user_logout a {
-	color:white;
+.sidebar .menuBlock .userReports li.userReportTitle a:focus {
+	text-decoration: none;
 }
 
-.appName {
-	font-size: 20px;
-	font-weight: bold;
-	padding-top: 10px;
+.sidebar .menuBlock .Collapsible.active {
+	border-left: 5px solid #FFFF00;
+}
+
+.sidebar .menuBlock .Collapsible {
+	position: relative;
+	border-left: 5px solid #FFFF00;
+	background-color: #293846;
+	transition: background-color 400ms;
+	transition: border-left 400ms;
+}
+
+.sidebar .menuBlock .Collapsible>span:before {
+	cursor: pointer;
+	display: inline-block;
+	content: '\f15c';
+	font-family: 'FontAwesome';
+	font-size: 15px;
+	line-height: 15px;
+	padding-right: 8px;
+}
+
+.sidebar .menuBlock .Collapsible>span:after {
+	cursor: pointer;
+	display: inline-block;
+	content: '\f105';
+	font-family: 'FontAwesome';
+	font-size: 15px;
+	position: absolute;
+	right: 10px;
+	transition: transform 300ms;
+}
+
+.sidebar .menuBlock .Collapsible>span.is-open:after {
+	transform: rotateZ(90deg);
+}
+
+.sidebar .menuBlock .accordionMenu span,
+.sidebar .menuBlock .accordionOpen {
+	font-size: 15px;
+	cursor: pointer;
+	display: block;
+	padding: 14px 5px;
+	padding-left: 25px;
+}
+
+/* span */
+.sidebar .menuBlock .accordionOpen {
+	padding-left: 25px;
+	padding-bottom: 14px;
+	color: white;
+}
+
+.sidebar .menuBlock .accordionOpen:before,
+.sidebar .menuBlock .accordionOpen:after {
+	color: white;
+}
+
+.sidebar .menuBlock .accordionMenu:active,
+.sidebar .menuBlock .accordionMenu:hover {
+	background-color: #293846;
+ 	color: white;
+}
+
+.sidebar .menuBlock .accordionMenu:hover span:before,
+.sidebar .menuBlock .accordionMenu:hover span:after {
+	color: white;
+}
+
+.sidebar .menuBlock .userReports li:active,
+.sidebar .menuBlock .userReports li:hover {
+ 	color:white;
+}
+
+.sidebar .menuBlock .menuSection li:active,
+.sidebar .menuBlock .menuSection li:hover {
+ 	background-color: #293846;
+ 	color: white;
+}
+
+.sidebar .menuBlock .menuSection li.menuTitle a {
+	color: inherit;
+}
+
+.sidebar .menuBlock .menuSection li.menuTitle a:active,
+.sidebar .menuBlock .menuSection li.menuTitle a:hover,
+.sidebar .menuBlock .menuSection li.menuTitle a:focus {
+	text-decoration: none;
+	color : inherit;
+}
+
+.sidebar .menuBlock .menuSection.hugBottom {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	box-shadow: inset 0 0 100px #000000;
+}
+
+.sidebar .menuBlock .hugBottom .menuTitle .specialLink {
+	background-color: #FFFF00;
+	color: #293846;
+}
+
+.sidebar .menuBlock .hugBottom .menuTitle .specialLink:hover {
+	background-color: #F2F20D;
+	color: #293846;
 }

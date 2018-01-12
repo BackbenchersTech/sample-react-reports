@@ -1,0 +1,31 @@
+.form-group.react-bs-table-search-form {
+    /* margin-left: auto; */
+    margin-right: 0px;
+}
+
+.fa-check {
+    color: #5FBA7D;
+}
+
+.fa-times {
+    color: #FF7878;
+}
+
+.contentLayout .ReportStyle1Class {
+	padding: 20px 30px;
+	height: max-content;
+	width: 90%;
+	margin:0px auto;
+	margin-top: 25px;
+	overflow: scroll;
+	box-shadow: 0px 2px 7px 3px rgba(0,0,0,0.15);
+}
+
+.contentLayout .ReportStyle1Class .ReportStyle1Header {
+	margin-top: 0px;
+}
+
+.table {
+	background-color: white;
+	margin: 0px;
+}

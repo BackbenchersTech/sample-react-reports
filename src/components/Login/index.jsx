@@ -1,8 +1,7 @@
-import React from 'react'; 
-import ReactDOM from 'react-dom';
+import React from 'react';
 
 import ErrorMessage from '../ErrorMessage';
-import Dashboard from '../Dashboard';
+import { login } from '../../actions';
 
 import './style.css';
 
@@ -58,28 +57,19 @@ class Login extends React.Component {
         event.preventDefault();
         var email = this.state.name;
         var pass = this.state.password;
-        var Credentials = [];
-        Credentials.push(email);
-        Credentials.push(pass);
+        var Credentials = {};
+        Credentials.email = email;
+        Credentials.pwd = pass;
 
-        if(  email === "admin" && pass === "admin" )
-        {
-            this.history.push('/app');
-        }
-        else
-        {
-            this.setState({
-                error: true
-            });
-        }
+        login(Credentials).then((res) => {
+            if(res) {
+                this.history.push('/app');
+            }
+            else {
+                this.setState({error: !res});
+            }
+        })
     }
-}
-
-function renderForm() {
-    ReactDOM.render(
-        <Dashboard isLoggedIn={true} />, 
-        document.getElementById('root')
-    );
 }
 
 export default Login;
