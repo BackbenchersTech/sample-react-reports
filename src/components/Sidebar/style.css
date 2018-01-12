@@ -35,6 +35,12 @@
 	display: flex;
 }
 
+.sidebar .userDetailsWrapper .userImg .img-circle {
+	width: 75px;
+	height: 75px;
+	padding: 10px;
+}
+
 .sidebar .userDetailsWrapper .textRight {
     display: flex;
     flex-wrap: wrap;
@@ -45,12 +51,6 @@
 
 .sidebar .userDetailsWrapper .textRight>div {
 	width: 100%;
-}
-
-.sidebar .userDetailsWrapper .userImg .img-circle {
-	width: 75px;
-	height: 75px;
-	padding: 10px;
 }
 
 .sidebar .userDetailsWrapper .textRight .userName {
@@ -68,9 +68,6 @@
 	max-height: 50vh;
  	overflow-y: scroll;
 }
-
-/* Reports Scroll-Bar*/
-
 
 .sidebar .menuBlock .userReports,
 .sidebar .menuBlock .menuSection  {
@@ -99,6 +96,14 @@
 	color: inherit;
 }
 
+
+.sidebar .menuBlock .Collapsible.accordionMenu {
+	padding: 14px 5px;
+	padding-left: 25px;
+	border-left: none;
+	background-color: #2F4050;
+}
+
 .sidebar .menuBlock .userReports li {
 	font-size: 15px;
 	padding: 5px;
@@ -109,12 +114,25 @@
 	padding-bottom: 10px;
 }
 
-.sidebar .menuBlock .Collapsible.accordionMenu {
-	padding: 14px 5px;
-	padding-left: 25px;
-	border-left: none;
-	background-color: #2F4050;
+.sidebar .menuBlock .userReports li.userReportTitle a {
+	color: inherit;
 }
+
+.sidebar .menuBlock .userReports li.userReportTitle a.active {
+	color: white;
+	font-weight: bold;
+}
+
+.sidebar .menuBlock .userReports li.userReportTitle a:active,
+.sidebar .menuBlock .userReports li.userReportTitle a:hover {
+	text-decoration: none;
+	color : inherit;
+}
+
+.sidebar .menuBlock .userReports li.userReportTitle a:focus {
+	text-decoration: none;
+}
+
 
 .sidebar .menuBlock .Collapsible.active {
 	border-left: 5px solid #FFFF00;
@@ -199,24 +217,6 @@
 	color: inherit;
 }
 
-.sidebar .menuBlock .userReports li.userReportTitle a {
-	color: inherit;
-}
-
-.sidebar .menuBlock .userReports li.userReportTitle a.active {
-	color: white;
-	font-weight: bold;
-}
-
-.sidebar .menuBlock .userReports li.userReportTitle a:active,
-.sidebar .menuBlock .userReports li.userReportTitle a:hover {
-	text-decoration: none;
-	color : inherit;
-}
-
-.sidebar .menuBlock .userReports li.userReportTitle a:focus {
-	text-decoration: none;
-}
 
 .sidebar .menuBlock .menuSection li.menuTitle a:active,
 .sidebar .menuBlock .menuSection li.menuTitle a:hover,
