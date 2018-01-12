@@ -1,9 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Col } from 'react-bootstrap';
-import './style.css';
-
 import Collapsible from 'react-collapsible';
+
+import { logout } from '../../actions';
+
+import './style.css';
 
 export default class Sidebar extends React.Component {
     constructor(props) {
@@ -30,11 +32,20 @@ export default class Sidebar extends React.Component {
         e.defaultPrevented = false;
     }
 
+    handleLogout(e) {
+        e.preventDefault();
+        logout().then(() => {
+            e.defaultPrevented = false;
+        })
+    }
+
     render() {   
         return(
             <Col className="sidebar ">
                 <div className="appName">
-                    <NavLink to="/app" onClick={() => this.handleNavItemClick(0)}>React Application</NavLink>
+                    <NavLink to="/app" onClick={() => this.handleNavItemClick(0)}>
+                    <i className="fa fa-cogs fa-spin"></i>
+                    Reportify</NavLink>
                 </div>
                 <div className="userDetailsWrapper">
                     <div className="userImg">
@@ -80,7 +91,7 @@ export default class Sidebar extends React.Component {
                     </ul>
                     <ul className="menuSection hugBottom">
                         <li className="menuTitle">
-                            <NavLink className="specialLink" to="/logout">
+                            <NavLink className="specialLink" to="/logout" onClick={(e) => this.handleLogout(e)}>
                                 <i className="fa fa-power-off"></i>
                                 <span>Logout</span>
                             </NavLink>
