@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import PrimaryLayout from './layouts/PrimaryLayout'
 import UnauthorizedLayout from './layouts/UnauthorizedLayout'
 import store from './store';
+import AuthorizedRoute from './AuthorizedRoute'
 
 import './index.css';
 
@@ -14,7 +15,8 @@ const App = props => (
         <BrowserRouter>
             <Switch>
                 <Route path="/auth" component={UnauthorizedLayout} />
-                <Route path="/app" component={PrimaryLayout} />
+                {/* <Route path="/app" component={PrimaryLayout} /> */}
+                <AuthorizedRoute path="/app" component={PrimaryLayout} />
                 <Redirect to="/auth" />
             </Switch>
         </BrowserRouter>

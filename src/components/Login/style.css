@@ -24,8 +24,6 @@
     margin-bottom: 0px;
     padding-top: 5px;
     padding-bottom: 5px;
-
-
 }
 
 .field-wrapper {
@@ -35,7 +33,6 @@
     border-top: 1px solid #EDEDED;
     border-bottom: 1px solid #EDEDED;
     background-color: #fff;
-
 }
 
 .field-input {
@@ -68,14 +65,12 @@
     color: #999;
     font-weight: 400;
     cursor: text;
-	
 }
 
 .submit-btn-wrapper {
 	padding: 2em 1em;
     width: 100%;
     background-color: #fff;
-   
 }
 
 .submit-btn {
@@ -100,3 +95,6 @@
     margin-top: calc(50vh - 165px);
 }
 
+.formPage-wrapper .form-wrapper .form-header .form-heading {
+    margin: 0px;
+}
