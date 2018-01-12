@@ -7,19 +7,19 @@ const DashHome = ({ history }) => (
     <div className = "pageContent">
 
     	<div className = "row pageSection1">
-	        <div className="welcomeMsg col-sm-3 col-md-3">
+	        <div className="welcomeMsg  col-md-12 col-lg-3">
 	            <h3>Welcome, John Alexander</h3>
 	        	<small>You have 2 Reports Notifications </small>
 	        	<ul className = "reportsNotificationList">
-	        		<li className = "reportsNotification">This is the 1st notification</li>
-	        		<li className = "reportsNotification">This is the 2nd notification</li>
-	        		<li className = "reportsNotification">This is the 3rd notification</li>
+	        		<li className = "reportsNotification">Please write a report to upload</li>
+	        		<li className = "reportsNotification">Call back to Henry</li>
+	        		<li className = "reportsNotification">Sign a contract and please contact me.</li>
 	        	</ul>
 	        </div>
-	        <div className = "graphSection col-sm-6 col-md-6">
+	        <div className = "graphSection col-md-6 col-lg-6">
 	        	<img src={require('./chart.jpg')} alt="chart" className = "graphImage"/>
 	        </div>
-	        <div className = "piegraphSection col-sm-3 col-md-3">
+	        <div className = "piegraphSection col-md-6 col-lg-3">
 	        	<h5 className = "piegraphTitle">Progress Reports</h5>
 	        	<p className= "piegraphSubtitle"> You have 2 records updated </p>
 	        	<img src={require('./pieChart.png')} alt="chart" className = "pieChartImage"/>
@@ -107,7 +107,6 @@ const DashHome = ({ history }) => (
 	           		</div>
 	           		</div>
 	           		<hr/>
-
 	           		<button className="btn btn-primary btn-block showButton "><i className="fa fa-arrow-down"></i> Show More</button>
 	        	</div>
 	        </div>

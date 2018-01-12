@@ -67,11 +67,11 @@ export default class Sidebar extends React.Component {
                             <i className="fa fa-info-circle" aria-hidden="true"></i>
                             <NavLink to="/app/report1">Help</NavLink>
                         </li>
-                        <li className={this.state.activeIndex === 2? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(2)}>
+                        {/*<li className={this.state.activeIndex === 2? "menuTitle active" : "menuTitle"}>
                             <i className="fa fa-cog" aria-hidden="true"></i>
                             <NavLink to="/settings">Settings</NavLink>
-                        </li>
-                        <li className="menuTitle">
+                        </li>*/}
+                        <li className={this.state.activeIndex === 3? "menuTitle active" : "menuTitle"}>
                             <i className="fa fa-power-off" aria-hidden="true"></i>
                             <NavLink to="/logout">Logout</NavLink>
                         </li>

@@ -218,7 +218,7 @@
 	text-decoration: none;
 }
 
-sidebar .menuBlock .menuSection li.menuTitle a:active,
+.sidebar .menuBlock .menuSection li.menuTitle a:active,
 .sidebar .menuBlock .menuSection li.menuTitle a:hover,
 .sidebar .menuBlock .menuSection li.menuTitle a:focus {
 	text-decoration: none;

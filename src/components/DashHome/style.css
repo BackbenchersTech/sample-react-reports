@@ -59,15 +59,15 @@
 
 .pageContent .pageSection1 .piegraphSection .pieChartImage {
 	height : 125px;
-	width : 70%;
+	width : initial;
 
 
 }
 .pageContent .pageSection2 {
 	padding: 15px;
 	padding-top: 30px;
-/*	height: 60vh;*/
-
+/*	height: calc(100vh - 330px);
+*/
 }
 
 /*.pageContent .pageSection2 .section2Part2 , 
@@ -77,7 +77,7 @@
 }*/
 
 .pageContent .pageSection2 .section2Part1 {
-	/*height: 59vh;*/
+	/*height: calc(100vh - 370px);*/
 	color: grey;
 
 }
@@ -120,7 +120,7 @@
 
 }
 .pageContent .pageSection2 .section2Part1 .section2Part1Row2 {
-/*	height: 40vh;*/
+	/*height: calc(100% - 65%);*/
 	background-color: white;
 	padding: 10px;
 	overflow:scroll;
@@ -148,6 +148,7 @@
 .pageContent .pageSection2 .section2Part3 .section2Part3Meetings {
 	background-color: white;
 /*	height: 59vh;*/
+/*	height: calc(100vh - 370px);*/
 	padding: 10px;
 	color: grey;
 	overflow:scroll;

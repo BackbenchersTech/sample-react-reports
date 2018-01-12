@@ -3,8 +3,9 @@ h2 {
 }
 
 .contentLayout .reportStyle2Class {
-	padding: 15px 50px;
-	background-color: #ededed;
+	width: 960px;
+	margin: auto;
+	background-color: white;
 	height: 100vh;
 	overflow: scroll;
 }
