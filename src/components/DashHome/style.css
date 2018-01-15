@@ -156,7 +156,7 @@
 }
 
 .pageContent .pageSection2 .section2Part2 .section2Part2Feed {
-	height: 59vh;
+	max-height: 50vh;
 }
 
 .pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeed {
@@ -165,14 +165,13 @@
 	margin:0px;
 }
 
-.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyfeedList,
-.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyfeedList1 {
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeedList .dailyfeedListItem {
 	padding-left: 10px;
 	padding-right: 10px;
 	
 }
 
-.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyfeedList .userFeedImage {
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeedList .dailyfeedListItem .userFeedImage {
 	width: 50px;
 	float: left;
 	margin-right: 10px;

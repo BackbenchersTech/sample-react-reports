@@ -1,10 +1,8 @@
 import React from 'react';
 
 import './style.css';
-import './scroll.js';
 
-
-import CardLoad from '../CardLoad';
+import DailyFeed from '../DailyFeed';
 
 const DashHome = ({ history }) => (
 
@@ -57,93 +55,7 @@ const DashHome = ({ history }) => (
 	            </div>
 	        </div>
 	        <div className = "section2Part2 col-xs-12 col-md-4">
-	        	<div className = "section2Part2Feed">
-	        		<h4 className = "dailyFeed">Your daily feed </h4>
-	           		<hr/>
-	           		
-	           		<div className = "dailyfeedList">
-	           		<img src="http://www.oiioproperty.com/Images/article/2016051402425466.png" alt="Profile User" className = "img-circle userFeedImage" />
-	           		
-	           		<div className = "dailyfeedListDetail">
-	           			<small className="pull-right">5m ago</small>
-                        <strong>John</strong> uploaded a new report <br/>
-                        <small className="text-muted">Today 5:20pm - 1.10.2018</small>
-	           		</div>
-	           		</div>
-	           		<hr/>
-	           		<div className = "dailyfeedList">
-	           		<img src="http://www.oiioproperty.com/Images/article/2016051402425466.png" alt="Profile User" className = "img-circle userFeedImage" />
-	           		
-	           		<div className = "dailyfeedListDetail">
-	           			<small className="pull-right">5m ago</small>
-                        <strong>John</strong> uploaded a new report <br/>
-                        <small className="text-muted">Today 5:20pm - 1.10.2018</small>
-	           		</div>
-	           		</div>
-	           		<hr/>
-
-	           		<div className = "dailyfeedList">
-	           		<img src="http://www.oiioproperty.com/Images/article/2016051402425466.png" alt="Profile User" className = "img-circle userFeedImage" />
-	           		
-	           		<div className = "dailyfeedListDetail">
-	           			<small className="pull-right">5m ago</small>
-                        <strong>John</strong> uploaded a new report <br/>
-                        <small className="text-muted">Today 5:20pm - 1.10.2018</small>
-	           		</div>
-	           		</div>
-	           		<hr/>
-	           		<div className = "dailyfeedList">
-	           		<img src="http://www.oiioproperty.com/Images/article/2016051402425466.png" alt="Profile User" className = "img-circle userFeedImage" />
-	           		
-	           		<div className = "dailyfeedListDetail">
-	           			<small className="pull-right">5m ago</small>
-                        <strong>John</strong> uploaded a new report <br/>
-                        <small className="text-muted">Today 5:20pm - 1.10.2018</small>
-	           		</div>
-	           		</div>
-	           		<hr/>
-	           		<div className = "dailyfeedList">
-	           		<img src="http://www.oiioproperty.com/Images/article/2016051402425466.png" alt="Profile User" className = "img-circle userFeedImage" />
-	           		
-	           		<div className = "dailyfeedListDetail">
-	           			<small className="pull-right">5m ago</small>
-                        <strong>John</strong> uploaded a new report <br/>
-                        <small className="text-muted">Today 5:20pm - 1.10.2018</small>
-	           		</div>
-	           		</div>
-	           		<hr/>
-	           		<div className = "dailyfeedList">
-	           		<img src="http://www.oiioproperty.com/Images/article/2016051402425466.png" alt="Profile User" className = "img-circle userFeedImage" />
-	           		
-	           		<div className = "dailyfeedListDetail">
-	           			<small className="pull-right">5m ago</small>
-                        <strong>John</strong> uploaded a new report <br/>
-                        <small className="text-muted">Today 5:20pm - 1.10.2018</small>
-	           		</div>
-	           		</div>
-	           		<hr/><div className = "dailyfeedList">
-	           		<img src="http://www.oiioproperty.com/Images/article/2016051402425466.png" alt="Profile User" className = "img-circle userFeedImage" />
-	           		
-	           		<div className = "dailyfeedListDetail">
-	           			<small className="pull-right">5m ago</small>
-                        <strong>John</strong> uploaded a new report <br/>
-                        <small className="text-muted">Today 5:20pm - 1.10.2018</small>
-	           		</div>
-	           		</div>
-	           		<hr/>
-	           		<div className = "dailyfeedList">
-	           		<img src="http://www.oiioproperty.com/Images/article/2016051402425466.png" alt="Profile User" className = "img-circle userFeedImage" />
-	           		
-	           		<div className = "dailyfeedListDetail">
-	           			<small className="pull-right">5m ago</small>
-                        <strong>John</strong> uploaded a new report <br/>
-                        <small className="text-muted">Today 5:20pm - 1.10.2018</small>
-	           		</div>
-	           		</div>
-	           		<hr/>
-	           		<button className="btn btn-primary btn-block showButton " onClick={this.scrollToTop} type = "button"><i className="fa fa-arrow-down"></i> Show More</button>
-	        	</div>
-
+				<DailyFeed />
 	        </div>
 
 	        <div className = "section2Part3 col-xs-12 col-md-4">
