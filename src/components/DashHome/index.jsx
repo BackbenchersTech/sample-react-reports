@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './style.css';
-import './scroll.js';
 
 
 import CardLoad from '../CardLoad';
@@ -39,7 +38,8 @@ const DashHome = ({ history }) => (
 	            
 	            	<div className = "NewsDetails">
 		            	<h4 className = "NewsTitle1">BitCoin report new data</h4>
-		            	<small className  = "NewsSubtitle">Check the price</small>
+		            	<small className  = "NewsSubtitle">
+		            	<a href = "https://cointelegraph.com/tags/bitcoin-price" target="_blank">Check the price</a></small>
 	            	</div>
 	            	<div className = "NewsImage">
 	            		<img src = {require('./barchart.png')} alt="barStock" className = "barchartStock" />

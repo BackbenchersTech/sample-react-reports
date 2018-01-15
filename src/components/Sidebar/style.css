@@ -24,7 +24,8 @@
 	color: white;
 }
 
-.sidebar .appName a {
+.sidebar .appName a,
+.sidebar .companyName {
 	text-decoration: none;
 	color: #f2f2f2;
 }
