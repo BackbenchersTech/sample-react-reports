@@ -3,6 +3,8 @@ import axios from 'axios';
 
 import Card from '../Card';
 
+import CardLoad from '../CardLoad';
+
 import './style.css';
 import '../../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 
@@ -44,9 +46,15 @@ class ReportStyle2 extends React.Component {
             <div className="reportStyle2Class">
                 <h2>Posts Report</h2>
 				{ (this.state.list.length>0)?
+
 					(this.state.list.map((post) =>
 						<Card key={post.id.toString()} post={post} />))
-					:"Data Loading..."
+
+					:
+					<div className = "cardLoad">
+					<CardLoad />
+					</div>
+
 				}
             </div>
         );
