@@ -77,7 +77,7 @@ export default class Sidebar extends React.Component {
                     </Collapsible>
                     <ul className="menuSection">
                         <li className={this.state.activeIndex === 1? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(1)}>
-                            <NavLink to="/app/report1">
+                            <NavLink to="/help">
                                 <i className="fa fa-info-circle" aria-hidden="true"></i>
                                 <span>Help</span>
                             </NavLink>

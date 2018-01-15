@@ -26,7 +26,7 @@ class ReportStyle1 extends React.Component {
         this.userFormatter = this.userFormatter.bind(this);
     }
 
-    componentWillMount(){
+    componentDidMount(){
         let currentComponent = this;
         axios.get('https://jsonplaceholder.typicode.com/users')
             .then(function(response) {

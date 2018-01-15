@@ -11,7 +11,7 @@ import './index.css';
 
 const App = props => (
     <Provider store={store}>
-        <BrowserRouter>
+        <BrowserRouter basename="/sample-react-reports">
             <Switch>
                 <Route path="/auth" component={UnauthorizedLayout} />
                 <Route path="/app" component={PrimaryLayout} />
