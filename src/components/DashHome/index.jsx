@@ -37,7 +37,8 @@ const DashHome = ({ history }) => (
 	            
 	            	<div className = "NewsDetails">
 		            	<h4 className = "NewsTitle1">BitCoin report new data</h4>
-		            	<small className  = "NewsSubtitle">Check the price</small>
+		            	<small className  = "NewsSubtitle">
+		            	<a href = "https://cointelegraph.com/tags/bitcoin-price" target="_blank" rel="noopener noreferrer">Check the price</a></small>
 	            	</div>
 	            	<div className = "NewsImage">
 	            		<img src = {require('./barchart.png')} alt="barStock" className = "barchartStock" />

@@ -17,7 +17,6 @@ class DailyFeed extends React.Component {
     }
 
     componentDidMount() {
-        console.log("mount")
         setTimeout(() => {
             this.setState({
                 waiting: false

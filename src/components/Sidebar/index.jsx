@@ -43,9 +43,9 @@ export default class Sidebar extends React.Component {
         return(
             <Col className="sidebar ">
                 <div className="appName">
+                    <h4 className = "companyName"> Open-Logix Showcase </h4>
                     <NavLink to="/app" onClick={() => this.handleNavItemClick(0)}>
-                    <i className="fa fa-cogs fa-spin"></i>
-                    Reportify</NavLink>
+                    React Application</NavLink>
                 </div>
                 <div className="userDetailsWrapper">
                     <div className="userImg">
