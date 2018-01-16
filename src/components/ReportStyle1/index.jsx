@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import ReactLoading from 'react-loading';
 
 import './style.css';
 import '../../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
@@ -11,10 +12,6 @@ class ReportStyle1 extends React.Component {
         this.state = {
             list: [],
             users: []
-        };
-        this.cellEditProp= {
-            mode: 'click',
-            blurToSave: true
         };
         this.selectRowProp = {
             mode: 'checkbox'
@@ -68,14 +65,15 @@ class ReportStyle1 extends React.Component {
                 
                 <h2 className = "ReportStyle1Header">
                     Todos Report</h2>
-                                {this.state.users.length>0 && 
-                <BootstrapTable data={this.state.list} striped hover pagination search multiColumnSearch exportCSV insertRow deleteRow selectRow={ this.selectRowProp } cellEdit={ this.cellEditProp } options={this.options} 
+                                {this.state.users.length>0? 
+                <BootstrapTable data={this.state.list} striped hover pagination search multiColumnSearch exportCSV selectRow={ this.selectRowProp } options={this.options} 
                                 containerClass="table">
                     <TableHeaderColumn dataField='id' isKey dataSort>PostId</TableHeaderColumn>
                     <TableHeaderColumn dataField='userId' dataFormat={this.userFormatter} dataSort>UserId</TableHeaderColumn>
                     <TableHeaderColumn dataField='title' dataSort>Title</TableHeaderColumn>
                     <TableHeaderColumn dataField='completed' dataFormat={this.statusFormatter} headerAlign='left' dataAlign='center'>Completed</TableHeaderColumn>
                 </BootstrapTable>
+                : <ReactLoading type="bars" color="444" className="loader" />
                 }
                 {/* you can give container classes, tablecontainer classes, headercontainerclass, bodycontainerclass, tableheaderclass, tablebodyclass, columnheaderclass, columnclass */}
             </div>

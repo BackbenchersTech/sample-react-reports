@@ -14,7 +14,6 @@
 .contentLayout .ReportStyle1Class {
 	padding: 20px 30px;
 	height: max-content;
-	min-height: 40%;
 	width: 90%;
 	margin:0px auto;
 	margin-top: 25px;
@@ -29,4 +28,8 @@
 .table {
 	background-color: white;
 	margin: 0px;
+}
+
+.ReportStyle1Class .loader {
+	margin: auto;
 }
