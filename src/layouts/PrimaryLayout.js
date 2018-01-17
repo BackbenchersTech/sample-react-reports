@@ -8,6 +8,7 @@ import DashHome from '../components/DashHome';
 import About from '../components/About';
 import ReportStyle1 from '../components/ReportStyle1';
 import ReportStyle2 from '../components/ReportStyle2';
+import Location from '../components/Location';
 import { getLoggedUser } from '../actions'
 
 import './style.css';
@@ -29,6 +30,7 @@ class PrimaryLayout extends React.Component {
                 {/* <Route path={`${match.path}/report1`} component={ReportPage} /> sublayout and further links and routing */}
                 <Route path={`${this.props.match.path}/report1`} component={ReportStyle1} />
                 <Route path={`${this.props.match.path}/report2`} component={ReportStyle2} />
+                <Route path={`${this.props.match.path}/location`} component={Location} />
                 <Redirect to={`${this.props.match.url}`} />
             </Switch>
         </Col>

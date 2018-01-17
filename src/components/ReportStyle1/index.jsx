@@ -75,8 +75,11 @@ class ReportStyle1 extends React.Component {
                 </BootstrapTable>
                 : <ReactLoading type="bars" color="444" className="loader" />
                 }
+                 
                 {/* you can give container classes, tablecontainer classes, headercontainerclass, bodycontainerclass, tableheaderclass, tablebodyclass, columnheaderclass, columnclass */}
             </div>
+
+            
         );
     }
 }
