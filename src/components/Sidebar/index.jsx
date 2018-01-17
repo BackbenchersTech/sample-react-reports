@@ -43,7 +43,7 @@ export default class Sidebar extends React.Component {
         return(
             <Col className="sidebar ">
                 <div className="appName">
-                    <h4 className = "companyName"> Open-Logix Showcase </h4>
+                    <div className = "companyName"> Open-Logix Showcase </div>
                     <NavLink to="/app" onClick={() => this.handleNavItemClick(0)}>
                     React Application</NavLink>
                 </div>
@@ -67,6 +67,12 @@ export default class Sidebar extends React.Component {
                                 <span>Home</span>
                             </NavLink>
                         </li>
+                        <li className={this.state.activeIndex === 1? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(1)}>
+                            <NavLink to="/app/about">
+                                <i className="fa fa-home"></i>
+                                <span>About</span>
+                            </NavLink>
+                        </li>
                     </ul>
                     {/* Accordion style for reports */}
                     <Collapsible trigger="Reports" className={this.state.activeIndex === 11? "accordionMenu active" : "accordionMenu"} transitionTime={400} easing={'cubic-bezier(0.175, 0.885, 0.32, 2.275)'} triggerOpenedClassName="accordionOpen">
@@ -76,7 +82,7 @@ export default class Sidebar extends React.Component {
                         </ul>
                     </Collapsible>
                     <ul className="menuSection">
-                        <li className={this.state.activeIndex === 1? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(1)}>
+                        <li className={this.state.activeIndex === 2? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(2)}>
                             <NavLink to="/help">
                                 <i className="fa fa-info-circle" aria-hidden="true"></i>
                                 <span>Help</span>
