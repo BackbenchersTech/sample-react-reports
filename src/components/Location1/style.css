@@ -102,3 +102,68 @@
 	font-weight: 500;
 
 }
+
+.Maincontainer {
+	background-color: #ededed;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.Maincontainer .addressrow1 .addressCol2 .addressImage ,
+.Maincontainer .addressrow1 .addressCol1 .address1 .address1Col1Image .beckimage,
+.Maincontainer .addressrow1 .addressCol1 .address2 .address2Col1Image .dallasimage,
+.Maincontainer .addressrow1 .addressCol2 .addressImage .vizagimage,
+.Maincontainer .addressrow2 .addressCol3 .addressCol3Image .bangimage{
+	width: 100%;
+	height: 100%;
+}
+
+.Maincontainer .addressrow1 .addressCol1 .address1,
+.Maincontainer .addressrow1 .addressCol1 .address2,
+.Maincontainer .addressrow1 .addressCol2,
+.Maincontainer .addressrow2 .addressCol3 .address4
+ {
+	margin-bottom: 20px;
+	background-color: white;
+}
+.Maincontainer .addressrow1 .addressCol2 {
+	height: 100%;
+}
+
+.Maincontainer .addressrow1 .addressCol1 .address1 .addressCol1Address .locationAddress .addressList,
+.Maincontainer .addressrow1 .addressCol1 .address2 .address2Col1Address .locationAddress .addressList,
+.Maincontainer .addressrow1 .addressCol2 .locationAddress .addressList,
+.Maincontainer .addressrow2 .addressCol3 .address4 .addressCol3Address .locationAddress .addressList{
+	list-style-type: none;
+	padding-left: 0px;
+	margin-bottom: 0px;
+
+}
+
+.Maincontainer .addressrow1 .addressCol1 .address1 .addressCol1Address,
+.Maincontainer .addressrow1 .addressCol1 .address2 .address2Col1Address,
+.Maincontainer .addressrow1 .addressCol2 .address3Row2,
+.Maincontainer .addressrow2 .addressCol3 .address4 .addressCol3Address
+
+{
+	padding: 37px 25px 25px 10px;
+}
+
+.Maincontainer .addressrow1 .addressCol2 .address3Row2 {
+
+}
+.Maincontainer .addressrow1 .addressCol1 .address1 .addressCol1Address .locationAddress .addressList .addressListDetail,
+.Maincontainer .addressrow1 .addressCol1 .address2 .address2Col1Address .locationAddress .addressList .addressListDetail,
+.Maincontainer .addressrow1 .addressCol2 .address3 .locationAddress .addressList .addressListDetail ,
+.Maincontainer .addressrow2 .addressCol3 .address4 .addressCol3Address .locationAddress .addressList .addressListDetail {
+	padding: 10px;
+}
+.Maincontainer .addressrow1 .addressCol1 .address1 .addressCol1Address .locationAddress .addressList .addressListDetail .addDetail,
+.Maincontainer .addressrow1 .addressCol1 .address2 .address2Col1Address .locationAddress .addressList .addressListDetail .addDetail,
+.Maincontainer .addressrow1 .addressCol2 .address3 .locationAddress .addressList .addressListDetail .addDetail,
+.Maincontainer .addressrow2 .addressCol3 .address4 .addressCol3Address .locationAddress .addressList .addressListDetail .addDetail
+ {
+	display: inline;
+	margin-left: 10px;
+	font-weight: 500;
+}
