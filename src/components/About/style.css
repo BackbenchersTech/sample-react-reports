@@ -1,3 +1,8 @@
+.about {
+    width: 90%;
+    margin: auto;
+}
+
 .about .stats .row {
     padding-bottom: 20px;
 }
@@ -5,6 +10,7 @@
 .about .history .title {
     text-transform: uppercase;
     line-height: 45px;
+    padding-bottom: 15px;
 }
 
 .about .history .title:after {
@@ -14,6 +20,7 @@
     background: #fde428;
     display: block;
     border-radius: 3px;
+    margin-top: 15px;
 }
 
 .about .history > ul {

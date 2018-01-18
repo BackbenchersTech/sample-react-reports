@@ -79,8 +79,6 @@ export default class Sidebar extends React.Component {
                         <ul className="userReports">
                             <li className="userReportTitle"><NavLink exact to="/app/report1" activeClassName="active" onClick={(e) => this.handleAccItemClick(11,e)}>Todos</NavLink></li>
                             <li className="userReportTitle"><NavLink  to="/app/report2" activeClassName="active" onClick={(e) => this.handleAccItemClick(11,e)}>Posts</NavLink></li>
-                            <li className="userReportTitle"><NavLink  to="/app/location" activeClassName="active" onClick={(e) => this.handleAccItemClick(11,e)}>Location</NavLink></li>
-                         
                         </ul>
                     </Collapsible>
                     <ul className="menuSection">

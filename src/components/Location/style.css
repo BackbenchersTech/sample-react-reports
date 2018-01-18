@@ -1,13 +1,7 @@
-.Maincontainer {
-	width: 90%;
-	margin: 0 auto;
-
-}
-
 .Maincontainer .addressrow1 .addressCol1 .wrapper {
-		background-color: white;
-	    box-shadow: 0px 2px 7px 3px rgba(0,0,0,0.15);
-	    margin-top: 20px;
+	background-color: white;
+	box-shadow: 0px 2px 7px 3px rgba(0,0,0,0.15);
+	margin-top: 20px;
 }
 
 .Maincontainer .addressrow1 .addressCol1 .wrapper .address1 {
@@ -28,7 +22,7 @@
 }
 
 .Maincontainer .addressrow1 .addressCol1 .wrapper .address1detail .addressList {
-		list-style-type: none;
+	list-style-type: none;
 	padding-left: 0px;
 	margin-bottom: 0px;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import StatsCard from '../StatsCard';
+import Location from '../Location';
 
 import './style.css';
 
@@ -87,6 +88,7 @@ class About extends React.Component {
                         </li>
                     </ul>                
                 </div>
+                <Location />
             </div>
         )
     }
