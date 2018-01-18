@@ -5,10 +5,11 @@ import { connect } from 'react-redux';
 
 import Sidebar from '../components/Sidebar';
 import DashHome from '../components/DashHome';
+import About from '../components/About';
 import ReportStyle1 from '../components/ReportStyle1';
 import ReportStyle2 from '../components/ReportStyle2';
-import { getLoggedUser } from '../actions'
 
+import { getLoggedUser } from '../actions'
 import './style.css';
 
 
@@ -24,6 +25,7 @@ class PrimaryLayout extends React.Component {
         <Col className= "contentLayout" >
             <Switch>
                 <Route path={`${this.props.match.path}`} exact component={DashHome} />
+                <Route path={`${this.props.match.path}/about`} component={About} />
                 {/* <Route path={`${match.path}/report1`} component={ReportPage} /> sublayout and further links and routing */}
                 <Route path={`${this.props.match.path}/report1`} component={ReportStyle1} />
                 <Route path={`${this.props.match.path}/report2`} component={ReportStyle2} />

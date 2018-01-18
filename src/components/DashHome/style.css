@@ -1,13 +1,15 @@
 .pageContent {
-	background-color: #EDEDED;
+
 	padding: 0 15px;
 }
 
 .pageContent .pageSection1 {	
 	background-color: white;
 	padding: 15px;
-	color: grey;
-	box-shadow: 1px 1px 2px rgba(0,0,0,0.1), -1px -1px 2px rgba(0,0,0,0.1);
+	    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
+                0 3px 1px -2px rgba(0, 0, 0, 0.2), 
+                0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	margin:0px 15px 0px 15px;
 }
 
 .pageContent .pageSection1 .welcomeMsg {
@@ -15,15 +17,32 @@
 	overflow: scroll;
 }
 
+.pageContent .pageSection1 .welcomeMsg h3 {
+	color:#002E5B;
+	font-weight: 600;
+}
+
 .pageContent .pageSection1 .welcomeMsg .reportsNotificationList {
-	list-style-type: decimal;
+	list-style-type: none;
 	max-height: 20vh;
 	padding-top:10px;
-	
+	padding: 0px;
+	margin-top: 15px;
 }
 .pageContent .pageSection1 .welcomeMsg .reportsNotificationList li {
-	padding: 10px;
-	border-bottom: 1px solid #ededed;
+	background: #f3f3f4;
+    border-left: none;
+    border-right: none;
+    border-radius: 4px;
+    color: inherit;
+    margin-bottom: 2px;
+    padding: 7px 6px 7px 12px;
+
+}
+
+.pageContent .pageSection1 .welcomeMsg .reportsNotificationList .reportsNotification .listDetail {
+	margin-left: 5px;
+	font-size: 12px;
 }
 .pageContent .pageSection1 .graphSection{
 	padding: 30px;
@@ -35,7 +54,19 @@
 	height:250px;
 	width: 100%;
 }
+@media only screen and (min-width: 1500px) {
+    .pageContent .pageSection1 .graphSection .graphImage {
+	height:250px;
+	width: 420px;
+}
+}
 
+@media only screen and (max-width:1200px ) and (min-width: 990px) {
+    .pageContent .pageSection1 .graphSection .graphImage {
+	height:250px;
+	width: 350px;
+}
+}
 .pageContent .pageSection1 .piegraphSection {
 	padding: 20px;
 	padding-right: 30px;
@@ -50,7 +81,7 @@
 .pageContent .pageSection1 .piegraphSection .piegraphDescription {
 	font-size: 13px;
 	padding: 5px;
-	color: grey;
+
 }
 
 .pageContent .pageSection1 .piegraphSection .piegraphDescription  {
@@ -66,28 +97,28 @@
 .pageContent .pageSection2 {
 	padding: 15px;
 	padding-top: 30px;
-/*	height: calc(100vh - 330px);
-*/
+	height: 600px;
 }
-
-/*.pageContent .pageSection2 .section2Part2 , 
-.pageContent .pageSection2 .section2Part3 {
-	height: 59vh;
-
-}*/
 
 .pageContent .pageSection2 .section2Part1 {
-	/*height: calc(100vh - 370px);*/
-	color: grey;
-
+	height:100%;
 }
 
+.NewsTitle ,
+.CommentsTitle,
+.dailyFeed,
+.Meetingstitle {
+	color:#002E5B;
+	font-weight: 600;
+}
 .pageContent .pageSection2 .section2Part1 .section2Part1Row1 {
 	background-color: white;
 	margin-bottom: 25px;
-/*	height: 16vh;*/
+	height: 30%;
 	padding: 10px;
-	box-shadow: 1px 1px 2px rgba(0,0,0,0.1), -1px -1px 2px rgba(0,0,0,0.1);
+	    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
+                0 3px 1px -2px rgba(0, 0, 0, 0.2), 
+                0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsTitle {
@@ -120,13 +151,31 @@
 
 }
 .pageContent .pageSection2 .section2Part1 .section2Part1Row2 {
-	/*height: calc(100% - 65%);*/
+	height: calc(100% - 35%);
 	background-color: white;
 	padding: 10px;
 	overflow:scroll;
-	box-shadow: 1px 1px 2px rgba(0,0,0,0.1), -1px -1px 2px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
+                0 3px 1px -2px rgba(0, 0, 0, 0.2), 
+                0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	width: 100%;
 }
 
+.pageContent .pageSection2 .section2Part1 .section2Part1Row2 .contactWrapper{
+    max-height: max-content;
+    padding: 10px 5px;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row2 .userImg  .img-circle {
+	width: 50px;
+	height: 50px;
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row2 .textRight {
+	padding-left: 10px;
+}
 .pageContent .pageSection2 .section2Part1 .section2Part1Row2 .CommentsTitle{
 	padding-left: 10px;
 	padding-top: 20px;
@@ -138,36 +187,94 @@
 	padding-left: 10px;
 }
 
+.pageContent .pageSection2 .section2Part1 .section2Part1Row2 .Comments .contactTitle {
+	margin:0px;
+	margin-bottom: 3px;
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row2  .contactDiv{
+
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.pageContent .pageSection2 .section2Part1 .section2Part1Row2 .contactemail {
+	font-size: 13px;
+    margin: 4px 0 4px;
+    color:grey;
+
+}
+
+.pageContent .pageSection2 .section2Part1 .section2Part1Row2 .contactemail a {
+	text-decoration: none;
+	color: #333;
+}
 .pageContent .pageSection2 .section2Part1 .section2Part1Row2 .barschartStock {
 	height:100px;
 	width: 80%;
 	padding-left: 20px;
 	padding-bottom: 10px;
 }
+
+.pageContent .pageSection2 .section2Part2,
+.pageContent .pageSection2 .section2Part3 {
+	height: 100%;
+}
 .pageContent .pageSection2 .section2Part2 .section2Part2Feed,
 .pageContent .pageSection2 .section2Part3 .section2Part3Meetings {
 	background-color: white;
-/*	height: 59vh;*/
-/*	height: calc(100vh - 370px);*/
+	height:100%;
 	padding: 10px;
-	color: grey;
-	overflow:scroll;
-	box-shadow: 1px 1px 2px rgba(0,0,0,0.1), -1px -1px 2px rgba(0,0,0,0.1);
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
+                0 3px 1px -2px rgba(0, 0, 0, 0.2), 
+                0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.pageContent .pageSection2 .section2Part3 .section2Part3Meetings .eventsDiv {
+	height: calc(100% - 60px);
+	overflow: scroll;
+	padding-top: 20px;
+}
+
+.pageContent .pageSection2 .section2Part3 .section2Part3Meetings .meetingsTitleDiv .Meetingstitle {
+	padding: 20px 10px 20px 10px;
+	margin:0px;
+	border-bottom: 1px solid #e7eaec;
+}
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed {
+	height: 100%;
 }
 
 .pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeed {
-	padding-left: 10px;
-	padding-top: 20px;
+	padding: 20px 10px 20px 10px;
 	margin:0px;
+	display:inline-block;
+
 }
 
-.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyfeedList {
-	padding-left: 10px;
-	padding-right: 10px;
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeedTitle .jobPosting{
+	padding: 20px 10px 20px 10px;
+	display: inline-grid;
+	float: right;
+}
+
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeedTitle{
 	
+	border-bottom: 1px solid #e7eaec;
+} 
+
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeedList {
+	height: calc(100% - 60px);
+	overflow: scroll;
 }
 
-.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyfeedList .userFeedImage {
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeedList .dailyfeedListItem {
+	padding: 20px 10px 20px 10px;
+
+}
+
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeedList .dailyfeedListItem:not(:last-child) {
+	border-bottom: 1px solid #e7eaec;
+}
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeedList .dailyfeedListItem .userFeedImage {
 	width: 50px;
 	float: left;
 	margin-right: 10px;
@@ -177,7 +284,7 @@
 	text-align: right;
     width: 110px;
     position: relative;
-    padding-top: 30px;
+    padding-top: 3px;
 
 }
 
@@ -199,6 +306,7 @@
     border-top: 1px solid #e7eaec;
     padding-top: 10px;
     min-height: 100px;
+    padding-bottom: 10px;
 }
 
 @media only screen and (max-width: 991px) {

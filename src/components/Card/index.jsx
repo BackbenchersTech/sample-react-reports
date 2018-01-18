@@ -9,7 +9,7 @@ class Card extends React.Component {
         this.state = {
             users: []
         }
-
+        
         this.getUserName = this.getUserName.bind(this);
     }
 
@@ -36,7 +36,7 @@ class Card extends React.Component {
 
     render() {
         return(
-            <div className="card">
+            <div id={this.props.post.id} className="card">
                 <div className="cardHeader">
                     <div className="userImg">
                         <img className="img-circle" src="http://i.dailymail.co.uk/i/pix/2017/04/20/13/3F6B966D00000578-4428630-image-m-80_1492690622006.jpg" alt="User Profile Pic"/>
