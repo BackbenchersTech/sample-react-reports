@@ -20,7 +20,6 @@ class ReportStyle1 extends React.Component {
             sortIndicator: false
         };
 
-        this.userFormatter = this.userFormatter.bind(this);
     }
 
     componentDidMount(){
@@ -52,12 +51,12 @@ class ReportStyle1 extends React.Component {
             return `<i class="fa fa-times"></i>`
     }
 
-    userFormatter(cell, row) {
-        for(var i in this.state.users) {
-            if( +`${cell}` === this.state.users[i].id )
-                return this.state.users[i].name
-        }
-    }
+    // userFormatter(cell, row) {
+    //     for(var i in this.state.users) {
+    //         if( +`${cell}` === this.state.users[i].id )
+    //             return this.state.users[i].name
+    //     }
+    // }
 
     render() {
         return (
@@ -68,15 +67,18 @@ class ReportStyle1 extends React.Component {
                                 {this.state.users.length>0? 
                 <BootstrapTable data={this.state.list} striped hover pagination search multiColumnSearch exportCSV selectRow={ this.selectRowProp } options={this.options} 
                                 containerClass="table">
-                    <TableHeaderColumn dataField='id' isKey dataSort>PostId</TableHeaderColumn>
-                    <TableHeaderColumn dataField='userId' dataFormat={this.userFormatter} dataSort>UserId</TableHeaderColumn>
+                    <TableHeaderColumn dataField='id' isKey dataSort width = "10%">PostId</TableHeaderColumn>
+                    <TableHeaderColumn dataField='userId' dataSort width= "10%">UserId</TableHeaderColumn>
                     <TableHeaderColumn dataField='title' dataSort>Title</TableHeaderColumn>
-                    <TableHeaderColumn dataField='completed' dataFormat={this.statusFormatter} headerAlign='left' dataAlign='center'>Completed</TableHeaderColumn>
+                    <TableHeaderColumn dataField='completed' width = "20%" dataFormat={this.statusFormatter} headerAlign='left' dataAlign='center'>Completed</TableHeaderColumn>
                 </BootstrapTable>
                 : <ReactLoading type="bars" color="444" className="loader" />
                 }
+                 
                 {/* you can give container classes, tablecontainer classes, headercontainerclass, bodycontainerclass, tableheaderclass, tablebodyclass, columnheaderclass, columnclass */}
             </div>
+
+            
         );
     }
 }

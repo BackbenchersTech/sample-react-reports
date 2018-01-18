@@ -6,8 +6,7 @@
 }
 
 .contentLayout > div {
-	padding: 0px 15px;
-	padding-top: 25px;
+	padding: 25px 15px;
 }
 
 ::-webkit-scrollBar {
