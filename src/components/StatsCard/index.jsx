@@ -19,12 +19,13 @@ class StatsCard extends React.Component {
         this.state = {
           current: 0
         }
-        this.stepTime = Math.floor(props.duration/(props.number - 0));
+        this.range = props.number - 0;
+        this.stepTime = (Math.floor(props.duration/this.range))/2;
     }
 
     componentDidMount() {
       this.timerID = setInterval(
-        () => this.tick(),
+        () => this.count(),
         this.stepTime
       );
     }
@@ -33,18 +34,18 @@ class StatsCard extends React.Component {
       clearInterval(this.timerID);
     }
 
-    tick() {
+    count() {
       clearInterval(this.timerID);
-      this.stepTime = Math.floor(this.props.duration/(this.props.number - this.state.current));
-      this.stepTime = (Math.max(this.stepTime, 1000) > 1000)? 1000 : this.stepTime;
-      this.timerID = setInterval(
-        () => this.tick(),
-        this.stepTime
-      )
       if(this.state.current !== this.props.number) {
         this.setState(prevState => ({
           current: prevState.current + 1
         }));
+        this.stepTime = Math.floor(this.props.duration/(this.props.number - this.state.current));
+        this.stepTime = (Math.max(this.stepTime, 1000) > 1000)? 1000 : this.stepTime;
+        this.timerID = setInterval(
+          () => this.count(),
+          this.stepTime
+        )
       }
       else {
         clearInterval(this.timerID);

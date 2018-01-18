@@ -9,15 +9,25 @@ class About extends React.Component {
     render() {
         return(
             <div className="about">
+                <div className="aboutContent">
+                    <h2 className="title">About</h2>
+                    <p>We are passionate about providing business and technology services to clients and helping them innovate and improve efficiencies by technology-enabling them.</p>
+                    <p>At OpenLogix, we have an awesome team of technology and business professionals that make things happen. We strive to provide a great experience for our customers, employees, and partners.</p>
+                </div>
                 <div className="stats">
                     <div className="row">
-                        <StatsCard width={3} number={225} duration={1000} text="Customers Served" bgcolor="ff5252" color="ffffff" />
-                        <StatsCard width={3} number={272} duration={1000} text="Consultants" bgcolor="7c4dff" color="ffffff" />
-                        <StatsCard width={3} number={478} duration={1000} text="Projects Executed" bgcolor="1bc98e" color="ffffff" />
+                        <StatsCard width={3} number={225} duration={1000} text="Customers Served" bgcolor="ffffff" color="333" />
+                        {/* bgcolor="ff5252" */}
+                        <StatsCard width={3} number={272} duration={1000} text="Consultants" bgcolor="ffffff" color="333" />
+                        {/* bgcolor="7c4dff" */}
+                        <StatsCard width={3} number={478} duration={1000} text="Projects Executed" bgcolor="ffffff" color="333" />
+                        {/* bgcolor="1bc98e" */}
                     </div>
                     <div className="row">
-                        <StatsCard width={2} number={11} duration={1000} text="Years in Business" bgcolor="448aff" color="ffffff" />
-                        <StatsCard width={2} number={100} duration={1000} text="Satisfied Customers" bgcolor="00bcd4" color="ffffff" suffix="%" />
+                        <StatsCard width={2} number={11} duration={1000} text="Years in Business" bgcolor="ffffff" color="333" />
+                        {/* bgcolor="448aff" */}
+                        <StatsCard width={2} number={100} duration={1000} text="Satisfied Customers" bgcolor="ffffff" color="333" suffix="%" />
+                        {/* bgcolor="00bcd4" */}
                     </div>
                 </div>
                 <div className="history">
@@ -88,7 +98,10 @@ class About extends React.Component {
                         </li>
                     </ul>                
                 </div>
-                <Location />
+                <div className="locations">
+                    <h2 className="title">Locations</h2>
+                    <Location />
+                </div>
             </div>
         )
     }
