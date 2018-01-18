@@ -29,6 +29,9 @@
 	text-decoration: none;
 	color: #f2f2f2;
 }
+.sidebar .companyName {
+	padding-bottom: 10px;
+}
 
 .sidebar .userDetailsWrapper {
 	max-height: 22vh;
