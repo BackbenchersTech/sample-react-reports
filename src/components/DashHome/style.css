@@ -1,5 +1,4 @@
 .pageContent {
-
 	padding: 0 15px;
 }
 
@@ -58,6 +57,13 @@
     .pageContent .pageSection1 .graphSection .graphImage {
 	height:250px;
 	width: 420px;
+}
+}
+
+@media only screen and (max-width: 767px) {
+	.pageContent .pageSection1 .graphSection  {
+	padding-left: 0px;
+	padding-right: 0px;
 }
 }
 
@@ -258,13 +264,32 @@
 	padding: 20px 10px 20px 10px;
 	margin:0px;
 	display:inline-block;
+	width: 70%;
 
 }
+
 
 .pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeedTitle .jobPosting{
 	padding: 20px 10px 20px 10px;
 	display: inline-grid;
 	float: right;
+	display: visible;
+}
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeedTitle .jobPostingMob {
+	display: none;
+}
+
+@media only screen and (max-width:1199px )and (min-width:991px ){
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeedTitle .jobPostingMob {
+	padding: 20px 10px 20px 10px;
+	display: inline-grid;
+	float: right;
+	width: 25%;
+	display: visible;
+}
+.pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeedTitle .jobPosting{
+	display: none;
+}
 }
 
 .pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeedTitle{
@@ -273,7 +298,7 @@
 } 
 
 .pageContent .pageSection2 .section2Part2 .section2Part2Feed .dailyFeedList {
-	height: calc(100% - 60px);
+	height: calc(100% - 65px);
 	overflow: scroll;
 }
 
@@ -291,6 +316,7 @@
 	margin-right: 10px;
 }
 
+
 .pageContent .pageSection2 .section2Part3 .meetingDetails .date {
 	text-align: right;
     width: 110px;
@@ -298,6 +324,20 @@
     padding-top: 3px;
 
 }
+
+@media only screen and (max-width:1200px ) and (min-width: 991px){
+
+.pageContent .pageSection2 .section2Part3 .meetingDetails .date {
+	text-align: right;
+    width: 85px;
+    position: relative;
+    padding-top: 3px;
+
+}
+
+}
+
+
 
 .pageContent .pageSection2 .section2Part3 .meetingDetails .date i {
 	position: absolute;

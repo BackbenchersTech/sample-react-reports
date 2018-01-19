@@ -118,6 +118,12 @@ const DashHome = ({ history }) => (
                 <small className="label label-danger pull-right">
                 <i className="fa fa-tags" aria-hidden="true"></i> 8 Jobs</small>
                 </div>
+
+                <div className = "jobPostingMob">
+                <small className="label label-danger pull-right">
+                <i className="fa fa-tags" aria-hidden="true"></i> 8</small>
+                </div>
+
                 </div>
                 <div className="dailyFeedList">
 
