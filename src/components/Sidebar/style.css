@@ -24,13 +24,14 @@
 	color: white;
 }
 
-.sidebar .appName a,
-.sidebar .companyName {
+.sidebar .appName a {
 	text-decoration: none;
 	color: #f2f2f2;
+	display: flex;
 }
-.sidebar .companyName {
-	padding-bottom: 10px;
+
+.sidebar .appName a img {
+	padding-right: 5px;
 }
 
 .sidebar .userDetailsWrapper {

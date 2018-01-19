@@ -43,9 +43,8 @@ export default class Sidebar extends React.Component {
         return(
             <Col className="sidebar ">
                 <div className="appName">
-                    <div className = "companyName"> Open-Logix Showcase </div>
                     <NavLink to="/app" onClick={() => this.handleNavItemClick(0)}>
-                    React Application</NavLink>
+                    <img src={require("../../assets/Openlogix Icon.svg")} height="20" alt="Company Logo"/>React Application</NavLink>
                 </div>
                 <div className="userDetailsWrapper">
                     <div className="userImg">
@@ -69,7 +68,7 @@ export default class Sidebar extends React.Component {
                         </li>
                         <li className={this.state.activeIndex === 1? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(1)}>
                             <NavLink to="/app/about">
-                                <i className="fa fa-home"></i>
+                                <i className="fa fa-info-circle"></i>
                                 <span>About</span>
                             </NavLink>
                         </li>
