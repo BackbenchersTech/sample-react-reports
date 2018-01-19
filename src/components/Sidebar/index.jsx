@@ -53,7 +53,7 @@ export default class Sidebar extends React.Component {
                     </div>
                     <div className="textRight">
                         <div className="wrapper">
-                            <div className="userName">John Alexander</div>
+                            <div className="userName">John Appleseed</div>
                             <div className = "usertitle">Administrator</div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@ export default class Sidebar extends React.Component {
                         </li>
                         <li className={this.state.activeIndex === 1? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(1)}>
                             <NavLink to="/app/about">
-                                <i className="fa fa-home"></i>
+                                <i className="fa fa-info-circle" aria-hidden="true"></i>
                                 <span>About</span>
                             </NavLink>
                         </li>

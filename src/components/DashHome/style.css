@@ -122,9 +122,13 @@
 }
 
 .pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsTitle {
-	padding-left: 10px;
-	padding-top: 20px;
+	padding: 20px 10px 20px 10px;
 	margin:0px;
+	border-bottom: 1px solid #e7eaec;
+}
+
+.UpcomingEvents {
+	padding-top: 10px;
 }
 
 .pageContent .pageSection2 .section2Part1 .section2Part1Row1 .NewsDetails{
@@ -154,7 +158,6 @@
 	height: calc(100% - 35%);
 	background-color: white;
 	padding: 10px;
-	overflow:scroll;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
                 0 3px 1px -2px rgba(0, 0, 0, 0.2), 
                 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -177,9 +180,17 @@
 	padding-left: 10px;
 }
 .pageContent .pageSection2 .section2Part1 .section2Part1Row2 .CommentsTitle{
-	padding-left: 10px;
-	padding-top: 20px;
+	padding: 20px 10px 20px 10px;
 	margin:0px;
+	border-bottom: 1px solid #e7eaec;
+}
+
+.contactWrapperDiv {
+	overflow: scroll;
+	padding:10px;
+	width: 100%;
+	height: calc(100% - 60px);
+
 }
 
 .pageContent .pageSection2 .section2Part1 .section2Part1Row2 .Comments {

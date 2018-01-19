@@ -11,7 +11,7 @@ class Location extends React.Component {
         			<div className = "wrapper">
         				<Row className = "address1">
         					<div className = "address1Col1Image">
-        						<img src={require('./texas.jpg')} alt="chart" className = "beckimage"/>
+        						<img src={require('../../assets/texas.jpg')} alt="chart" className = "beckimage"/>
         					</div>
         				</Row>
         				<Row className = "address1detail">
@@ -41,7 +41,7 @@ class Location extends React.Component {
         				<div className = "wrapper">
         				<Row className = "address1">
         					<div className = "address1Col1Image">
-        						<img src={require('./beck.jpg')} alt="chart" className = "beckimage"/>
+        						<img src={require('../../assets/beck.jpg')} alt="chart" className = "beckimage"/>
         					</div>
         				</Row>
         				<Row className = "address1detail">
@@ -71,7 +71,7 @@ The Woodlands, TX 77380</p>
         				<div className = "wrapper">
         				<Row className = "address1">
         					<div className = "address1Col1Image">
-        						<img src={require('./texas.jpg')} alt="chart" className = "beckimage"/>
+        						<img src={require('../../assets/texas.jpg')} alt="chart" className = "beckimage"/>
         					</div>
         				</Row>
         				<Row className = "address1detail">

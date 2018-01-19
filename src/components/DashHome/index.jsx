@@ -10,7 +10,7 @@ const DashHome = ({ history }) => (
     	<div className = "row pageSection1">
 
 	        <div className="welcomeMsg col-sm-12 col-md-6">
-	            <h3>Welcome, John Alexander</h3>
+	            <h3>Welcome, John Appleseed</h3>
 	        	<small>Services offered by us</small>
 	        	<ul className = "reportsNotificationList">
 	        		<li className = "reportsNotification">
@@ -37,22 +37,17 @@ const DashHome = ({ history }) => (
 	        </div>
 
 	       	<div className = "graphSection col-sm-12 col-md-6 ">
-	        	<img src={require('./pie.png')} alt="chart" className = "graphImage"/>
+	        	<img src={require('../../assets/pie.png')} alt="chart" className = "graphImage"/>
 	        </div>
 
        </div>
-
-
-
-
-
 
        <div className = "row pageSection2">
 	        <div className="section2Part1 col-xs-12 col-md-4">
 	        	<div className = "section2Part1Row1">
 					<h4 className = "NewsTitle">Upcoming Events</h4>
-	            	<hr/>
-	            
+	            	
+	               <div className = "UpcomingEvents">
 	            	<div className = "NewsDetails">
 		            	<h5 className = "NewsTitle1"><strong>IBM conference</strong></h5>
 		            	<small className  = "NewsSubtitle">
@@ -61,11 +56,12 @@ const DashHome = ({ history }) => (
 	            	<div className = "NewsImage">
 	            		<small className = "pull-right">03/19/2018</small>
 	            	</div>
+                    </div>
 
 	            </div>
 	            <div className = "section2Part1Row2">
 	           		<h4 className = "CommentsTitle">Contact Us</h4>
-	           		<hr/>
+	           		<div className = "contactWrapperDiv">
 	           		<div className = "contactWrapper">
 	           		<div className="userImg">
                         <img className = "img-circle" src="https://www.open-logix.com/wp-content/uploads/2013/07/jackie-adamson-174x174.jpg" alt="Profile User"/>
@@ -109,6 +105,7 @@ const DashHome = ({ history }) => (
 	           		</div>
 	           		</div>
 	           		</div>
+                    </div>
 	            </div>
 	            </div>
 	        </div>

@@ -23,6 +23,13 @@
                 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
+.contentLayout .ReportStyle1Class > h2 {
+	margin-top: 0;
+	margin-bottom: 0px;
+	color:#002E5B;
+	line-height: 45px;
+	padding-bottom: 15px;
+}
 .contentLayout .ReportStyle1Class .ReportStyle1Header {
 	margin-top: 0px;
 }
