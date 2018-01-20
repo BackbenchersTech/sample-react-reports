@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Col } from 'react-bootstrap';
 import Collapsible from 'react-collapsible';
 
 import { logout } from '../../actions';
@@ -12,7 +11,7 @@ export default class Sidebar extends React.Component {
         super(props);
         this.state = {
             activeIndex: 0
-        }
+        };
 
         this.handleNavItemClick = this.handleNavItemClick.bind(this);
         this.handleAccItemClick = this.handleAccItemClick.bind(this);
@@ -22,6 +21,7 @@ export default class Sidebar extends React.Component {
         this.setState({
             activeIndex: index
         });
+        this.props.handleMouseDown();
     }
 
     handleAccItemClick(index, e) {
@@ -30,6 +30,7 @@ export default class Sidebar extends React.Component {
             activeIndex: index
         });
         e.defaultPrevented = false;
+        this.props.handleMouseDown();
     }
 
     handleLogout(e) {
@@ -39,13 +40,18 @@ export default class Sidebar extends React.Component {
         })
     }
 
-    render() {   
+    render() {
+        var visibility = "hide";
+        
+        if(this.props.menuVisibility) {
+            visibility = "show";
+        }
+
         return(
-            <Col className="sidebar ">
+            <div className={"sidebar " + visibility } >
                 <div className="appName">
-                    <div className = "companyName"> Open-Logix Showcase </div>
                     <NavLink to="/app" onClick={() => this.handleNavItemClick(0)}>
-                    React Application</NavLink>
+                    <img src={require("../../assets/Openlogix Icon.svg")} height="20" alt="Company Logo"/>React Application</NavLink>
                 </div>
                 <div className="userDetailsWrapper">
                     <div className="userImg">
@@ -53,7 +59,7 @@ export default class Sidebar extends React.Component {
                     </div>
                     <div className="textRight">
                         <div className="wrapper">
-                            <div className="userName">John Alexander</div>
+                            <div className="userName">John Appleseed</div>
                             <div className = "usertitle">Administrator</div>
                         </div>
                     </div>
@@ -69,7 +75,7 @@ export default class Sidebar extends React.Component {
                         </li>
                         <li className={this.state.activeIndex === 1? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(1)}>
                             <NavLink to="/app/about">
-                                <i className="fa fa-home"></i>
+                                <i className="fa fa-info-circle" aria-hidden="true"></i>
                                 <span>About</span>
                             </NavLink>
                         </li>
@@ -105,7 +111,7 @@ export default class Sidebar extends React.Component {
                         </li>
                     </ul>
                 </div>
-            </Col>
+            </div>
         )
     }
 }

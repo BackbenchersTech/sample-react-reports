@@ -24,7 +24,7 @@ class ReportStyle2 extends React.Component {
 
 	componentDidMount(){
 		let currentComponent = this;
-		axios.get('https://jsonplaceholder.typicode.com/posts/')
+		axios.get('https://jsonplaceholder.typicode.com/posts?_sort=title&_order=asc')
 			.then(function (response) {
 				let keys = currentComponent.getKeys(response.data[0]);
 				currentComponent.setState({
@@ -46,13 +46,11 @@ class ReportStyle2 extends React.Component {
             <div className="reportStyle2Class">
                 <h2>Posts Report</h2>
 				{ (this.state.list.length>0)?
-
 					(this.state.list.map((post) =>
 						<Card key={post.id.toString()} post={post} />))
-
 					:
 					<div className = "cardLoad">
-					<CardLoad />
+						<CardLoad />
 					</div>
 
 				}

@@ -1,0 +1,43 @@
+.contentLayout .mobileHeader {
+    height: 60px;
+    width: 100%;
+    padding: 20px 30px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: #2f4050;
+    z-index: 20;
+}
+
+@media screen and (min-width: 769px) {
+    .contentLayout .mobileHeader {
+        display: none;
+    }
+}
+
+.mobileHeader .menuIcon {
+    color: white;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.mobileHeader .appName {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.mobileHeader .appName a,
+.mobileHeader .appName a:hover,
+.mobileHeader .appName a:focus {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+}
+
+.mobileHeader .appName a img {
+    padding-right: 5px;
+}

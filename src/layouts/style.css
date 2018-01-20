@@ -1,8 +1,29 @@
+
+@media screen and (max-width: 767px){
+.contentLayout {
+	width: calc(100% - 70px);
+	height: 100vh;
+	overflow-y: scroll;
+}
+}
+
+@media screen and (min-width: 768px){
 .contentLayout {
 	width: calc(100% - 280px);
 	float: left;
 	height: 100vh;
 	overflow-y: scroll;
+}
+
+@media screen and (max-width: 768px) {
+	.contentLayout {
+		width: 100%;
+		position: relative;
+	}
+
+	.contentLayout .mobileHeader + div {
+		margin-top: 60px;
+	}
 }
 
 .contentLayout > div {
