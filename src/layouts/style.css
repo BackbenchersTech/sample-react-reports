@@ -5,6 +5,17 @@
 	overflow-y: scroll;
 }
 
+@media screen and (max-width: 768px) {
+	.contentLayout {
+		width: 100%;
+		position: relative;
+	}
+
+	.contentLayout .mobileHeader + div {
+		margin-top: 60px;
+	}
+}
+
 .contentLayout > div {
 	padding: 25px 15px;
 }

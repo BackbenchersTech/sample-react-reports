@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Col } from 'react-bootstrap';
 import Collapsible from 'react-collapsible';
 
 import { logout } from '../../actions';
@@ -12,7 +11,7 @@ export default class Sidebar extends React.Component {
         super(props);
         this.state = {
             activeIndex: 0
-        }
+        };
 
         this.handleNavItemClick = this.handleNavItemClick.bind(this);
         this.handleAccItemClick = this.handleAccItemClick.bind(this);
@@ -22,6 +21,7 @@ export default class Sidebar extends React.Component {
         this.setState({
             activeIndex: index
         });
+        this.props.handleMouseDown();
     }
 
     handleAccItemClick(index, e) {
@@ -30,6 +30,7 @@ export default class Sidebar extends React.Component {
             activeIndex: index
         });
         e.defaultPrevented = false;
+        this.props.handleMouseDown();
     }
 
     handleLogout(e) {
@@ -39,9 +40,15 @@ export default class Sidebar extends React.Component {
         })
     }
 
-    render() {   
+    render() {
+        var visibility = "hide";
+        
+        if(this.props.menuVisibility) {
+            visibility = "show";
+        }
+
         return(
-            <Col className="sidebar ">
+            <div className={"sidebar " + visibility } >
                 <div className="appName">
                     <NavLink to="/app" onClick={() => this.handleNavItemClick(0)}>
                     <img src={require("../../assets/Openlogix Icon.svg")} height="20" alt="Company Logo"/>React Application</NavLink>
@@ -104,7 +111,7 @@ export default class Sidebar extends React.Component {
                         </li>
                     </ul>
                 </div>
-            </Col>
+            </div>
         )
     }
 }

@@ -36,7 +36,6 @@ class Card extends React.Component {
     }
 
     getUserImg(userId) {
-        console.log(typeof(userId))
         switch (userId) {
             case 1: return "https://i.pinimg.com/736x/c6/a4/64/c6a4645d9f9af45a9c9d7b094c18a47a--portrait-ideas-girl-photos.jpg" 
             case 2: return "https://www.profile4men.com/wp-content/uploads/2016/11/img-Rob_BW.jpg"
