@@ -21,8 +21,32 @@ class PrimaryLayout extends React.Component {
             visible: false
         }
 
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
         this.toggleMenu = this.toggleMenu.bind(this);
         this.handleMouseDown = this.handleMouseDown.bind(this);
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions() {
+        if(window.innerWidth > 768) {
+            this.setState({
+                visible: true
+            });
+        }
+        else {
+            console.log("hey")
+            this.setState({
+                visible: false
+            });
+        }
     }
 
     componentWillMount() {
