@@ -11,11 +11,35 @@ export default class Sidebar extends React.Component {
         super(props);
         this.state = {
             activeIndex: 0
+            // visibility: "hide"
         };
 
         this.handleNavItemClick = this.handleNavItemClick.bind(this);
         this.handleAccItemClick = this.handleAccItemClick.bind(this);
+        // this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
+
+    // componentDidMount() {
+    //     this.updateWindowDimensions();
+    //     window.addEventListener('resize', this.updateWindowDimensions);
+    // }
+
+    // componentWillUnmount() {
+    //     window.removeEventListener('resize', this.updateWindowDimensions);
+    // }
+
+    // updateWindowDimensions() {
+    //     if(window.innerWidth > 768) {
+    //         this.setState({
+    //             visibility: "show"
+    //         });
+    //     }
+    //     else {
+    //         this.setState({
+    //             visibility: "hide"
+    //         });
+    //     }
+    // }
 
     handleNavItemClick(index) {
         this.setState({
@@ -37,14 +61,17 @@ export default class Sidebar extends React.Component {
         e.preventDefault();
         logout().then(() => {
             e.defaultPrevented = false;
-        })
+        });
     }
 
     render() {
         var visibility = "hide";
-        
+
         if(this.props.menuVisibility) {
-            visibility = "show";
+            // this.setState({
+            //     visibility: "show"
+            // });
+            visibility = "show"
         }
 
         return(
