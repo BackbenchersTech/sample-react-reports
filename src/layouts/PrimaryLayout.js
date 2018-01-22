@@ -19,12 +19,16 @@ class PrimaryLayout extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            visible: false
+            visible: false,
+            activeIndex: 0
         }
 
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
         this.toggleMenu = this.toggleMenu.bind(this);
         this.handleMouseDown = this.handleMouseDown.bind(this);
+        this.handleNavItemClick = this.handleNavItemClick.bind(this);
+        this.handleHeaderClick = this.handleHeaderClick.bind(this);
+        this.handleAccItemClick = this.handleAccItemClick.bind(this);
     }
 
     componentDidMount() {
@@ -63,14 +67,40 @@ class PrimaryLayout extends React.Component {
         this.toggleMenu();
         // e.stopPropagation();
     }
+
+    handleNavItemClick(index) {
+        this.setState({
+            activeIndex: index
+        });
+        if(window.innerWidth < 768) {
+            this.handleMouseDown();
+        }
+    }
+
+    handleAccItemClick(index, e) {
+        e.preventDefault();
+        this.setState({
+            activeIndex: index
+        });
+        e.defaultPrevented = false;
+        if(window.innerWidth < 768) {
+            this.handleMouseDown();
+        }
+    }
+
+    handleHeaderClick() {
+        this.setState({
+            activeIndex: 0
+        })
+    }
     
     render() {
         const layout =
         <div className="primaryLayout">
-            <Sidebar handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible} />
+            <Sidebar handleNavItemClick={this.handleNavItemClick} handleAccItemClick={this.handleAccItemClick} activeIndex={this.state.activeIndex} menuVisibility={this.state.visible} />
             <Overlay visibility={this.state.visible} />
             <Col className= "contentLayout" >
-                <Header handleMouseDown={this.handleMouseDown} />
+                <Header handleMouseDown={this.handleMouseDown} handleHeaderClick={this.handleHeaderClick} />
                 <Switch>
                     <Route path={`${this.props.match.path}`} exact component={DashHome} />
                     <Route path={`${this.props.match.path}/about`} component={About} />

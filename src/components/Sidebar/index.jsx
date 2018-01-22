@@ -7,36 +7,6 @@ import { logout } from '../../actions';
 import './style.css';
 
 export default class Sidebar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            activeIndex: 0
-        };
-
-        this.handleNavItemClick = this.handleNavItemClick.bind(this);
-        this.handleAccItemClick = this.handleAccItemClick.bind(this);
-    }
-
-    handleNavItemClick(index) {
-        this.setState({
-            activeIndex: index
-        });
-        if(window.innerWidth < 768) {
-            this.props.handleMouseDown();
-        }
-    }
-
-    handleAccItemClick(index, e) {
-        e.preventDefault();
-        this.setState({
-            activeIndex: index
-        });
-        e.defaultPrevented = false;
-        if(window.innerWidth < 768) {
-            this.props.handleMouseDown();
-        }
-    }
-
     handleLogout(e) {
         e.preventDefault();
         logout().then(() => {
@@ -50,11 +20,11 @@ export default class Sidebar extends React.Component {
         if(this.props.menuVisibility) {
             visibility = "show"
         }
-
+        
         return(
             <div className={"sidebar " + visibility } >
                 <div className="appName">
-                    <NavLink to="/app" onClick={() => this.handleNavItemClick(0)}>
+                    <NavLink to="/app" onClick={() => this.props.handleNavItemClick(0)}>
                     <img src={require("../../assets/Openlogix Icon.svg")} height="20" alt="Company Logo"/>React Application</NavLink>
                 </div>
                 <div className="userDetailsWrapper">
@@ -71,13 +41,13 @@ export default class Sidebar extends React.Component {
                     
                 <div className="menuBlock">
                     <ul className="menuSection">
-                        <li className={this.state.activeIndex === 0? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(0)}>
+                        <li className={this.props.activeIndex === 0? "menuTitle active" : "menuTitle"} onClick={() => this.props.handleNavItemClick(0)}>
                             <NavLink to="/app">
                                 <i className="fa fa-home"></i>
                                 <span>Home</span>
                             </NavLink>
                         </li>
-                        <li className={this.state.activeIndex === 1? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(1)}>
+                        <li className={this.props.activeIndex === 1? "menuTitle active" : "menuTitle"} onClick={() => this.props.handleNavItemClick(1)}>
                             <NavLink to="/app/about">
                                 <i className="fa fa-info-circle" aria-hidden="true"></i>
                                 <span>About</span>
@@ -85,21 +55,21 @@ export default class Sidebar extends React.Component {
                         </li>
                     </ul>
                     {/* Accordion style for reports */}
-                    <Collapsible trigger="Reports" className={this.state.activeIndex === 11? "accordionMenu active" : "accordionMenu"} transitionTime={400} easing={'cubic-bezier(0.175, 0.885, 0.32, 2.275)'} triggerOpenedClassName="accordionOpen">
+                    <Collapsible trigger="Reports" className={this.props.activeIndex === 11? "accordionMenu active" : "accordionMenu"} transitionTime={400} easing={'cubic-bezier(0.175, 0.885, 0.32, 2.275)'} triggerOpenedClassName="accordionOpen">
                         <ul className="userReports">
-                            <li className="userReportTitle"><NavLink exact to="/app/report1" activeClassName="active" onClick={(e) => this.handleAccItemClick(11,e)}>Todos</NavLink></li>
-                            <li className="userReportTitle"><NavLink  to="/app/report2" activeClassName="active" onClick={(e) => this.handleAccItemClick(11,e)}>Posts</NavLink></li>
+                            <li className="userReportTitle"><NavLink exact to="/app/report1" activeClassName="active" onClick={(e) => this.props.handleAccItemClick(11,e)}>Todos</NavLink></li>
+                            <li className="userReportTitle"><NavLink  to="/app/report2" activeClassName="active" onClick={(e) => this.props.handleAccItemClick(11,e)}>Posts</NavLink></li>
                         </ul>
                     </Collapsible>
                     {/* <ul className="menuSection">
-                        <li className={this.state.activeIndex === 2? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(2)}>
+                        <li className={this.props.activeIndex === 2? "menuTitle active" : "menuTitle"} onClick={() => this.props.handleNavItemClick(2)}>
                             <NavLink to="/help">
                                 <i className="fa fa-info-circle" aria-hidden="true"></i>
                                 <span>Help</span>
                             </NavLink>
                         </li>
                        
-                        <li className={this.state.activeIndex === 2? "menuTitle active" : "menuTitle"} onClick={() => this.handleNavItemClick(2)}>
+                        <li className={this.props.activeIndex === 2? "menuTitle active" : "menuTitle"} onClick={() => this.props.handleNavItemClick(2)}>
                             <NavLink to="/settings">
                                 <i className="fa fa-cog" aria-hidden="true"></i>
                                 <span>Settings</span>
@@ -108,7 +78,7 @@ export default class Sidebar extends React.Component {
                     </ul> */}
                     <ul className="menuSection hugBottom">
                         <li className="menuTitle">
-                            <NavLink className="specialLink" to="/logout" onClick={(e) => this.handleLogout(e)}>
+                            <NavLink className="specialLink" to="/logout" onClick={(e) => this.props.handleLogout(e)}>
                                 <i className="fa fa-power-off"></i>
                                 <span>Logout</span>
                             </NavLink>

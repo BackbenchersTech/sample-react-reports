@@ -46,7 +46,6 @@ class DashHome extends React.Component {
                     }]
                 }
             }));
-            console.log(this.state)
         }
         else {
             this.setState(prevState => ({

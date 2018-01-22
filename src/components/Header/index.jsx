@@ -11,7 +11,7 @@ class Header extends React.Component {
                     <i className="fa fa-bars open"></i>
                 </div>
                 <div className="appName">
-                    <NavLink to="/app" onClick={() => this.handleNavItemClick(0)}>
+                    <NavLink to="/app" onClick={() => this.props.handleHeaderClick()}>
                         <img src={require("../../assets/Openlogix Icon.svg")} height="17" alt="Company Logo"/>
                         React Application
                     </NavLink>
