@@ -42,7 +42,6 @@ class PrimaryLayout extends React.Component {
             });
         }
         else {
-            console.log("hey")
             this.setState({
                 visible: false
             });
