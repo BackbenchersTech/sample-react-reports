@@ -9,6 +9,7 @@ import About from '../components/About';
 import ReportStyle1 from '../components/ReportStyle1';
 import ReportStyle2 from '../components/ReportStyle2';
 import Header from '../components/Header';
+import Overlay from '../components/Overlay';
 
 import { getLoggedUser } from '../actions'
 import './style.css';
@@ -67,6 +68,7 @@ class PrimaryLayout extends React.Component {
         const layout =
         <div className="primaryLayout">
             <Sidebar handleMouseDown={this.handleMouseDown} menuVisibility={this.state.visible} />
+            <Overlay visibility={this.state.visible} />
             <Col className= "contentLayout" >
                 <Header handleMouseDown={this.handleMouseDown} />
                 <Switch>
