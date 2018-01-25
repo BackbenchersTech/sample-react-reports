@@ -78,7 +78,7 @@ export default class Sidebar extends React.Component {
                     </ul> */}
                     <ul className="menuSection hugBottom">
                         <li className="menuTitle">
-                            <NavLink className="specialLink" to="/logout" onClick={(e) => this.props.handleLogout(e)}>
+                            <NavLink className="specialLink" to="/logout" onClick={(e) => this.handleLogout(e)}>
                                 <i className="fa fa-power-off"></i>
                                 <span>Logout</span>
                             </NavLink>

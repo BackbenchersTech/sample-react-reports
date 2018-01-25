@@ -263,7 +263,9 @@
 	color: #293846;
 }
 
-.sidebar .menuBlock .hugBottom .menuTitle .specialLink:hover {
+.sidebar .menuBlock .hugBottom .menuTitle .specialLink:hover,
+.sidebar .menuBlock .hugBottom .menuTitle .specialLink:focus,
+.sidebar .menuBlock .hugBottom .menuTitle .specialLink:active {
 	background-color: #F2F20D;
 	color: #293846;
 }

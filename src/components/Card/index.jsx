@@ -6,31 +6,14 @@ import './style.css';
 class Card extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            users: []
-        }
-        
-        this.getUserName = this.getUserName.bind(this);
+
         this.getUserImg = this.getUserImg.bind(this);
     }
 
-    componentDidMount() {
-        let currentComponent = this;
-		axios.get('https://jsonplaceholder.typicode.com/users')
-			.then(function (response) {
-				currentComponent.setState({
-					  users: response.data
-    			})
-			})
-			.catch(function (error) {
-				console.log(error);
-			});
-    }
-
     getUserName(userId) {
-        for( var i in this.state.users) {
-            if( this.state.users[i].id === userId ) {
-                return this.state.users[i].name;
+        for( var i in this.props.users) {
+            if( this.props.users[i].id === userId ) {
+                return this.props.users[i].name;
             }
         }
     }
