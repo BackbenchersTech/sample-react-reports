@@ -11,13 +11,14 @@ import ReportStyle2 from '../components/ReportStyle2';
 import Header from '../components/Header';
 import Overlay from '../components/Overlay';
 
-import { getLoggedUser } from '../actions'
+import { getLoggedUser } from '../actions/loginActions'
 import './style.css';
 
 
 class PrimaryLayout extends React.Component {
     constructor(props) {
         super(props);
+        console.log(this.props)
         this.state = {
             visible: false,
             activeIndex: 0

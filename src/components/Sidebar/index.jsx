@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Collapsible from 'react-collapsible';
 
-import { logout } from '../../actions';
+import { logout } from '../../actions/loginActions';
 
 import './style.css';
 
