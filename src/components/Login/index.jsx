@@ -1,7 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import ErrorMessage from '../ErrorMessage';
-import { login } from '../../actions';
+import { login } from '../../actions/loginActions';
 
 import './style.css';
 
@@ -39,7 +40,7 @@ class Login extends React.Component {
                             <button className="submit-btn" type="submit">Login</button>
                         </div>
                     </form>
-                    {this.state.error && <ErrorMessage />}
+                    {(!this.props.pending && !this.props.logged) && <ErrorMessage />}
                 </div>
             </div>
         );
@@ -60,16 +61,29 @@ class Login extends React.Component {
         var Credentials = {};
         Credentials.email = email;
         Credentials.pwd = pass;
-
-        login(Credentials).then((res) => {
-            if(res) {
-                this.history.push('/app');
-            }
-            else {
-                this.setState({error: !res});
+        this.props.login(Credentials).then(() => {
+            if(this.props.logged === true) {
+                localStorage.setItem('token', this.props.token);
+                this.history.push("/app");
             }
         })
     }
 }
 
-export default Login;
+const mapStateToProps = (state) => {
+    return {
+        pending: state.loggedUserState.pending,
+        logged: state.loggedUserState.logged,
+        token: state.loggedUserState.token
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        login: creds => {
+            return dispatch(login(creds))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
