@@ -8,12 +8,14 @@ export const login = (creds) => {
             {
                 dispatch(loginSuccess(response.data.token));
             }
-        })
-        .catch(error => {
+        },
+        error => {
             dispatch(loginFail())
-            throw(error);
+            console.log(error);
+            // to get error response codes
+            // console.log(error.response)
         });
-    };
+    }
 }
 
 export function loginSuccess(token) {
@@ -33,12 +35,37 @@ export function loginFail() {
     }
 }
 
-export const getLoggedUser = () => {
-    setTimeout(() => {
-        store.dispatch({
-            type: 'GET_LOGGED_USER'
-        })
-    }, 500)
+export const getLoggedUser = (token) => {
+    return function(dispatch) {
+        return usersApi.checkLogin(token).then(response => {
+            if(response.status === 200)
+            {
+                dispatch(checkSuccess());
+            }
+        },
+        error => {
+            dispatch(checkFail());
+            console.log(error);
+            // to get error response codes
+            // console.log(error.response)
+        });
+    }
+}
+
+export function checkSuccess() {
+    console.log("success")
+    return {
+        type: 'GET_LOGGED_USER',
+        logged: true
+    }
+}
+
+export function checkFail() {
+    console.log("fail")
+    return {
+        type: 'GET_LOGGED_USER',
+        logged: false
+    }
 }
 
 export const logout = () => {

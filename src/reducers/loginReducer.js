@@ -5,10 +5,10 @@ const initialState = {
 }
 
 const loginReducer = (state = initialState, action) => {
-
     if(action.type === 'GET_LOGGED_USER') {
         return Object.assign({}, state, {
-            pending: false
+            pending: false,
+            logged: action.logged
         })
     }
 

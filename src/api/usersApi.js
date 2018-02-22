@@ -8,6 +8,13 @@ class UsersApi {
         }
         return axios.post('http://localhost:9000/api/login', body)
     }
+
+    static checkLogin(token) {
+        let headers = {
+            "access-token": token
+        }
+        return axios.get('http://localhost:9000/api/tokenCheck', {'headers': headers});
+    }
 }
 
 export default UsersApi;

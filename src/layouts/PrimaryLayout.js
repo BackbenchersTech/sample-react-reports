@@ -18,7 +18,6 @@ import './style.css';
 class PrimaryLayout extends React.Component {
     constructor(props) {
         super(props);
-        console.log(this.props)
         this.state = {
             visible: false,
             activeIndex: 0
@@ -54,9 +53,13 @@ class PrimaryLayout extends React.Component {
         }
     }
 
-    componentWillMount() {
-        getLoggedUser();
-    }
+    // Moved to authorizedroute
+    // componentWillMount() {
+    //     let token = localStorage.getItem('token');
+    //     this.props.getLoggedUser(token).then(() => {
+    //         console.log(this.props.logged);
+    //     })
+    // }
 
     toggleMenu() {
         this.setState({
@@ -118,9 +121,19 @@ class PrimaryLayout extends React.Component {
     }
 }
 
-const stateToProps = ({ loggedUserState }) => ({
-    pending: loggedUserState.pending,
-    logged: loggedUserState.logged
-})
+const mapStateToProps = (state) => {
+    return {
+        pending: state.loggedUserState.pending,
+        logged: state.loggedUserState.logged
+    }
+}
 
-export default connect(stateToProps)(PrimaryLayout);
+const mapDispatchToProps = dispatch => {
+    return {
+        getLoggedUser: token => {
+            return dispatch(getLoggedUser(token))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PrimaryLayout);

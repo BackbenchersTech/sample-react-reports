@@ -61,7 +61,12 @@ class Login extends React.Component {
         var Credentials = {};
         Credentials.email = email;
         Credentials.pwd = pass;
-        this.props.login(Credentials)
+        this.props.login(Credentials).then(() => {
+            if(this.props.logged === true) {
+                localStorage.setItem('token', this.props.token);
+                this.history.push("/app");
+            }
+        })
     }
 }
 
@@ -76,7 +81,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return {
         login: creds => {
-            dispatch(login(creds))
+            return dispatch(login(creds))
         }
     }
 }
