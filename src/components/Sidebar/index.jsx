@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Collapsible from 'react-collapsible';
 
-import { logout } from '../../actions';
+import { logout } from '../../actions/loginActions';
 
 import './style.css';
 
@@ -78,7 +78,7 @@ export default class Sidebar extends React.Component {
                     </ul> */}
                     <ul className="menuSection hugBottom">
                         <li className="menuTitle">
-                            <NavLink className="specialLink" to="/auth/login" onClick={(e) => this.props.handleLogout(e)}>
+                            <NavLink className="specialLink" to="/logout" onClick={(e) => this.handleLogout(e)}>
                                 <i className="fa fa-power-off"></i>
                                 <span>Logout</span>
                             </NavLink>

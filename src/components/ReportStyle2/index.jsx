@@ -15,7 +15,8 @@ class ReportStyle2 extends React.Component {
         this.state = {
 			pending: false,
 			list: [],
-			cols: []
+			cols: [],
+			users: []
 		};
 		this.options = {
 			sortIndicator: false
@@ -35,6 +36,15 @@ class ReportStyle2 extends React.Component {
 			.catch(function (error) {
 				console.log(error);
 			});
+		axios.get('https://jsonplaceholder.typicode.com/users')
+			.then(function (response) {
+				currentComponent.setState({
+					  users: response.data
+    			})
+			})
+			.catch(function (error) {
+				console.log(error);
+			});
 	}
 
 	getKeys(data) {
@@ -47,7 +57,7 @@ class ReportStyle2 extends React.Component {
                 <h2>Posts Report</h2>
 				{ (this.state.list.length>0)?
 					(this.state.list.map((post) =>
-						<Card key={post.id.toString()} post={post} />))
+						<Card key={post.id.toString()} post={post} users={this.state.users} />))
 					:
 					<div className = "cardLoad">
 						<CardLoad />
